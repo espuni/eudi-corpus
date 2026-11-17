@@ -43,6 +43,8 @@ URL canónicas. Siempre la de la **versión** citada, no la de la última.
 
 - Portal técnico: https://ageverification.dev/
 - Especificación técnica: https://github.com/eu-digital-identity-wallet/av-doc-technical-specification
+  (sin versiones etiquetadas desde la v1.0.6 de julio de 2025; las fichas citan el commit `8b97287`, 2026-09-02)
+- Trusted List de AV en el eIDAS Dashboard: https://eidas.ec.europa.eu/efda/trust-services/browse/av-tl
 - Política de la Comisión: https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification
 
 ## ISO

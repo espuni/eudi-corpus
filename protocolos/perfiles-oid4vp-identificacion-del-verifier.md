@@ -10,7 +10,7 @@ estado: borrador
 verificado:
 revisar_antes:
 tags: [oid4vp, haip, dc-api, mdoc, verificacion-de-edad, dcql]
-relacionadas: [PRO-002, PRO-003, PRO-004, FMT-002, AV-002, OBS-001]
+relacionadas: [PRO-002, PRO-003, PRO-004, FMT-002, AV-002, OBS-001, CRI-003]
 ---
 
 # Perfiles de OpenID4VP: identificación del verifier, cifrado y handover
@@ -21,13 +21,16 @@ relacionadas: [PRO-002, PRO-003, PRO-004, FMT-002, AV-002, OBS-001]
 firmada ni si la respuesta va cifrada: eso lo decide el perfil, y en el mundo
 EUDI conviven al menos tres, que no son intercambiables.
 
-## 1. Los tres perfiles (procedencia: norma, pendiente de verificar)
+## 1. Los tres perfiles (procedencia: norma)
+
+La columna de AV está verificada contra el anexo A (commit `8b97287`, ver
+[AV-002](../edad/perfil-presentacion-av.md)); la de HAIP, pendiente.
 
 | | Firmado (HAIP) | Fallback de AV | DC API con `org-iso-mdoc` |
 |---|---|---|---|
 | Dónde se define | HAIP 1.0 sobre OpenID4VP 1.0 | AV anexo A §A.6 | ISO/IEC TS 18013-7 anexo C; AV anexo A §A.8 para ZK |
-| Identificación del verifier | `client_id` con prefijo `x509_hash:` (hash del certificado hoja) | `client_id` con prefijo `redirect_uri:` | No hay `client_id` de OpenID4VP |
-| Petición | Firmada (JAR, `typ` `oauth-authz-req+jwt`, cadena en `x5c`) | **Sin firmar, por valor** | `DeviceRequest` CBOR |
+| Identificación del verifier | `client_id` con prefijo `x509_hash:` (hash del certificado hoja) | `client_id` con prefijo `redirect_uri:` seguido del `response_uri` | No hay `client_id` de OpenID4VP |
+| Petición | Firmada (JAR, `typ` `oauth-authz-req+jwt`, cadena en `x5c`) | **Sin firmar, por valor**: `request` y `request_uri` no deben usarse | `DeviceRequest` CBOR |
 | Modo de respuesta | `direct_post.jwt` o `dc_api.jwt` | `direct_post` | Respuesta de la DC API |
 | Cifrado de la respuesta | JWE con clave efímera del verifier en `client_metadata.jwks` | **Ninguno** | HPKE: DHKEM(P-256), HKDF-SHA256, AES-128-GCM |
 | Transporte | QR, deeplink o DC API | QR o deeplink | Solo DC API |

@@ -16,6 +16,8 @@ Términos tal como los usan las normas. Si el uso habitual difiere, se dice.
 | Trusted List | Lista de confianza nacional de prestadores (XML) | ETSI TS 119 612 | |
 | LoTE | Lista de entidades de confianza, para los actores de la cartera | ETSI TS 119 602 | Confundirla con la Trusted List |
 | DCQL | Lenguaje de consulta de credenciales de OpenID4VP | OpenID4VP 1.0 | |
+| AP / AVI | Attestation Provider / Age Verification App Instance: emisor y app del Blueprint de verificación de edad | Spec. AV §1.3 | |
+| AVSUA | AVS Unit Attestation: la WUA aplicada a la app de AV (AVIA + KA) | Spec. AV, anexo A §A.5 | |
 | Over-asking | Que una parte usuaria pida más atributos de los registrados | ARF; WRPRC | |
 
 Todas las filas están pendientes de verificar contra la fuente citada.
