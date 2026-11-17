@@ -1,0 +1,231 @@
+/* Tema del sitio sobre Material for MkDocs.
+
+   Los valores son los del sistema de diseño de espuni (tokens.css, DESIGN.md):
+   rampa neutra, cinco acentos con nombre (verify, alert, pending, horizon,
+   signal) con variantes -bg/-bd/-text, radios de 4 a 12 px, Geist y Geist
+   Mono. Se transcriben a mano: Material usa sus propias variables --md-*.
+
+   Reglas que se mantienen:
+   - un color de estado significa estado: verify = vigente/revisado,
+     pending = borrador, alert = vencido. horizon y signal nunca son estado;
+   - el significado nunca va solo en el color: siempre con texto o glifo;
+   - texto atenuado con --text-muted, nunca con opacity;
+   - un único anillo de foco: 2 px de --signal en :focus-visible. */
+
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #f0f1f3;
+  --border: #e8eaed;
+  --border-strong: #d8dce2;
+  --text: #111827;
+  --text-dim: #374151;
+  --text-muted: #5f6673;
+
+  --verify: #16a34a;  --verify-bg: rgba(22, 163, 74, 0.08);  --verify-bd: rgba(22, 163, 74, 0.22);  --verify-text: #166534;
+  --alert: #dc2626;   --alert-bg: rgba(220, 38, 38, 0.08);   --alert-bd: rgba(220, 38, 38, 0.20);   --alert-text: #b91c1c;
+  --pending: #d97706; --pending-bg: rgba(217, 119, 6, 0.08); --pending-bd: rgba(217, 119, 6, 0.22); --pending-text: #92400e;
+  --horizon: #9333ea; --horizon-bg: rgba(147, 51, 234, 0.08); --horizon-bd: rgba(147, 51, 234, 0.22); --horizon-text: #7e22ce;
+  --signal: #2563eb;  --signal-bg: rgba(37, 99, 235, 0.08);  --signal-bd: rgba(37, 99, 235, 0.20);  --signal-text: #1d4ed8;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+}
+
+[data-md-color-scheme='slate'] {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface-2: #1a1a1a;
+  --border: #1f1f1f;
+  --border-strong: #2a2a2a;
+  --text: #ededec;
+  --text-dim: #a3a3a3;
+  --text-muted: #8a8a8a;
+
+  --verify: #4ade80;  --verify-bg: rgba(74, 222, 128, 0.10);  --verify-bd: rgba(74, 222, 128, 0.28);  --verify-text: #4ade80;
+  --alert: #f87171;   --alert-bg: rgba(248, 113, 113, 0.10);  --alert-bd: rgba(248, 113, 113, 0.26);  --alert-text: #f87171;
+  --pending: #fbbf24; --pending-bg: rgba(251, 191, 36, 0.10); --pending-bd: rgba(251, 191, 36, 0.28); --pending-text: #fbbf24;
+  --horizon: #c084fc; --horizon-bg: rgba(192, 132, 252, 0.10); --horizon-bd: rgba(192, 132, 252, 0.28); --horizon-text: #c084fc;
+  --signal: #60a5fa;  --signal-bg: rgba(96, 165, 250, 0.10);  --signal-bd: rgba(96, 165, 250, 0.26);  --signal-text: #60a5fa;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-base: 0ms; }
+}
+
+/* ── Material sobre los tokens ─────────────────────────────────────── */
+
+[data-md-color-scheme='default'],
+[data-md-color-scheme='slate'] {
+  --md-default-bg-color: var(--bg);
+  --md-default-fg-color: var(--text);
+  --md-default-fg-color--light: var(--text-dim);
+  --md-default-fg-color--lighter: var(--text-muted);
+  --md-default-fg-color--lightest: var(--border-strong);
+  --md-typeset-color: var(--text);
+  --md-code-bg-color: var(--surface-2);
+  --md-code-fg-color: var(--text);
+
+  /* cabecera neutra, como el portal: superficie con texto */
+  --md-primary-fg-color: var(--surface);
+  --md-primary-fg-color--light: var(--surface-2);
+  --md-primary-fg-color--dark: var(--surface);
+  --md-primary-bg-color: var(--text);
+  --md-primary-bg-color--light: var(--text-dim);
+
+  --md-accent-fg-color: var(--verify);
+  --md-accent-fg-color--transparent: var(--verify-bg);
+  --md-typeset-a-color: var(--verify-text);
+
+  --md-footer-bg-color: #111827;
+  --md-footer-bg-color--dark: #0a0a0a;
+  --md-footer-fg-color: #ededec;
+  --md-footer-fg-color--light: #a3a3a3;
+  --md-footer-fg-color--lighter: #8a8a8a;
+}
+
+[data-md-color-scheme='slate'] {
+  --md-footer-bg-color: var(--surface);
+  --md-footer-bg-color--dark: var(--bg);
+}
+
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--border);
+}
+.md-tabs { background-color: var(--surface); border-bottom: 1px solid var(--border); }
+.md-search__form { background-color: var(--surface-2); border-radius: var(--radius-sm); }
+.md-search__input { color: var(--text); }
+.md-search__input::placeholder { color: var(--text-muted); }
+
+/* contenido: superficie blanca sobre el fondo gris, como las tarjetas del portal */
+.md-main__inner .md-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.md-content__inner { padding-top: 0.4rem; }
+
+/* tipografía: escala del portal (heading-lg 28/700, heading 19/700, body 15/1.6) */
+.md-typeset { font-size: 0.75rem; line-height: 1.6; }
+.md-typeset h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); text-wrap: balance; }
+.md-typeset h2 { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+.md-typeset h3 { font-size: 0.8rem; font-weight: 700; color: var(--text); }
+.md-typeset code { border-radius: var(--radius-xs); font-variant-numeric: tabular-nums; }
+.md-typeset pre > code { border-radius: var(--radius-md); }
+
+/* enlaces y transiciones (≤ 300 ms, ease-out) */
+.md-typeset a { transition: color var(--dur-fast) var(--ease-out); }
+.md-typeset a:hover { color: var(--verify); }
+
+/* un único anillo de foco */
+:focus-visible,
+.md-typeset a:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* tablas */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+.md-typeset table:not([class]) th {
+  background: var(--surface-2);
+  color: var(--text-dim);
+  font-weight: 600;
+}
+.md-typeset table:not([class]) td { border-top: 1px solid var(--border); }
+
+/* admoniciones: borde fino y tinte del acento, sin sombra */
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 1px;
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  font-size: 0.7rem;
+}
+.md-typeset .admonition.note, .md-typeset .admonition.info,
+.md-typeset details.note, .md-typeset details.info { border-color: var(--signal-bd); }
+.md-typeset .note > .admonition-title, .md-typeset .info > .admonition-title { background: var(--signal-bg); }
+.md-typeset .note > .admonition-title::before, .md-typeset .info > .admonition-title::before { background-color: var(--signal); }
+.md-typeset .admonition.warning { border-color: var(--pending-bd); }
+.md-typeset .warning > .admonition-title { background: var(--pending-bg); }
+.md-typeset .warning > .admonition-title::before { background-color: var(--pending); }
+.md-typeset .admonition.danger { border-color: var(--alert-bd); }
+.md-typeset .danger > .admonition-title { background: var(--alert-bg); }
+.md-typeset .danger > .admonition-title::before { background-color: var(--alert); }
+.md-typeset .admonition.success { border-color: var(--verify-bd); }
+.md-typeset .success > .admonition-title { background: var(--verify-bg); }
+.md-typeset .success > .admonition-title::before { background-color: var(--verify); }
+
+/* recuadro de metadatos de cada ficha: neutro, es evidencia, no un aviso */
+.md-typeset .admonition.abstract { border-color: var(--border-strong); background: var(--surface); }
+.md-typeset .abstract > .admonition-title { background: var(--surface-2); color: var(--text); }
+.md-typeset .abstract > .admonition-title::before { background-color: var(--text-muted); }
+.md-typeset .abstract ul { list-style: none; margin-left: 0; padding-left: 0; }
+.md-typeset .abstract li { margin-left: 0; }
+
+/* tarjetas del panel */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: none;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+.md-typeset .grid.cards > ul > li:hover { border-color: var(--border-strong); box-shadow: none; }
+.md-typeset .grid.cards > ul > li > hr { border-color: var(--border); }
+.md-typeset .cifra {
+  font-family: var(--md-code-font-family);
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  display: block;
+  line-height: 1.2;
+}
+
+/* píldoras de estado: tres estados, color + glifo + texto */
+.md-typeset .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.05em 0.55em;
+  border: 1px solid;
+  border-radius: var(--radius-xs);
+  font-size: 0.85em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.md-typeset .pill--verify { color: var(--verify-text); background: var(--verify-bg); border-color: var(--verify-bd); }
+.md-typeset .pill--pending { color: var(--pending-text); background: var(--pending-bg); border-color: var(--pending-bd); }
+.md-typeset .pill--alert { color: var(--alert-text); background: var(--alert-bg); border-color: var(--alert-bd); }
+.md-typeset .pill--neutral { color: var(--text-dim); background: var(--surface-2); border-color: var(--border-strong); }
+
+/* identificadores (fichas, CELEX, versiones): mono, como la evidencia en el portal */
+.md-typeset .id { font-family: var(--md-code-font-family); font-size: 0.9em; font-variant-numeric: tabular-nums; }
+
+/* Material pinta tablas y admoniciones con el color de fondo de la página;
+   dentro de la superficie de contenido van sobre --surface. */
+.md-typeset table:not([class]),
+.md-typeset .admonition,
+.md-typeset details { background-color: var(--surface); }
+
+/* En pantallas estrechas la superficie de contenido no toca los bordes. */
+@media screen and (max-width: 76.2344em) {
+  .md-main__inner .md-content { margin-left: 0.4rem; margin-right: 0.4rem; }
+}

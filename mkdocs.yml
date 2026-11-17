@@ -13,6 +13,14 @@ hooks:
 theme:
   name: material
   language: es
+  # Tipografía y colores del sistema de diseño de espuni (Geist, tokens en
+  # docs/assets/stylesheets/corpus.css). Sin su logo: el corpus no lleva marca.
+  font:
+    text: Geist
+    code: Geist Mono
+  icon:
+    logo: material/library-outline
+    repo: material/github
   features:
     - navigation.indexes
     - navigation.sections
@@ -26,18 +34,21 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-4
         name: Modo oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: Modo claro
+
+extra_css:
+  - assets/stylesheets/corpus.css
 
 markdown_extensions:
   - admonition

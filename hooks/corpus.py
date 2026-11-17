@@ -286,7 +286,8 @@ def enlace_ficha(desde: str, i: str) -> str:
 
 def recuadro(markdown: str, uri: str, info: dict) -> str:
     m = info["meta"]
-    filas = [("Procedencia", m.get("procedencia")), ("Estado", m.get("estado")),
+    filas = [("Procedencia", m.get("procedencia")),
+             ("Estado", pill(m.get("estado")) if m.get("estado") else None),
              ("Fuente", m.get("fuente") or ", ".join(m.get("fuentes") or [])),
              ("Versión de la fuente", m.get("version_fuente")),
              ("Requisitos", ", ".join(map(str, m.get("requisitos") or []))),
@@ -294,8 +295,8 @@ def recuadro(markdown: str, uri: str, info: dict) -> str:
              ("Verificado", _verificado(m) or "sin verificar")]
     rb = m.get("revisar_antes")
     if rb:
-        aviso = " (vencida)" if _fecha(rb) and _fecha(rb) < HOY else ""
-        filas.append(("Revisar antes de", f"{rb}{aviso}"))
+        vencida = _fecha(rb) and _fecha(rb) < HOY
+        filas.append(("Revisar antes de", pill(f"{rb} · vencida", "alert", "!") if vencida else rb))
     rel_ids = [str(x) for x in (m.get("relacionadas") or [])]
     if rel_ids:
         filas.append(("Relacionadas", ", ".join(enlace_ficha(uri, i) for i in rel_ids)))
@@ -330,6 +331,19 @@ def _titulo(uri: str) -> str:
         return uri
     i = info["meta"].get("id")
     return f"{i} · {info['titulo']}" if i and es_ficha(info) else info["titulo"]
+
+
+ESTADOS = {
+    "borrador": ("pending", "◐"), "revisado": ("verify", "●"), "vigente": ("verify", "●"),
+    "obsoleto": ("neutral", "○"), "superado": ("neutral", "○"),
+}
+
+
+def pill(texto: str, tono: str | None = None, glifo: str = "") -> str:
+    """Píldora de estado: color, glifo y texto (el color nunca va solo)."""
+    if tono is None:
+        tono, glifo = ESTADOS.get(str(texto), ("neutral", "○"))
+    return f'<span class="pill pill--{tono}">{glifo} {texto}</span>'
 
 
 def _verificado(meta: dict):
@@ -484,13 +498,13 @@ def generar_panel() -> str:
         rb, ver = _fecha(f["meta"].get("revisar_antes")), _verificado(f["meta"])
         motivo = None
         if not ver:
-            motivo = "sin verificar"
+            motivo = pill("sin verificar", "neutral", "○")
         elif rb and rb < HOY:
-            motivo = f"revisión vencida ({rb})"
+            motivo = pill(f"vencida el {rb}", "alert", "!")
         elif rb and rb - HOY <= VENTANA_REVISION:
-            motivo = f"revisar antes de {rb}"
+            motivo = pill(f"revisar antes de {rb}", "pending", "◐")
         if motivo:
-            revisar.append(f"| [{f['meta']['id']}]({f['src_uri']}) | {f['titulo']} | {motivo} |")
+            revisar.append(f"| [<span class=\"id\">{f['meta']['id']}</span>]({f['src_uri']}) | {f['titulo']} | {motivo} |")
 
     recientes = sorted((f for f in fichas if _verificado(f["meta"])),
                        key=lambda f: str(_verificado(f["meta"])), reverse=True)[:8]
@@ -504,7 +518,8 @@ def generar_panel() -> str:
     con_enlace = sum(1 for r in refs.values() if r.get("url") and "iso.org/search" not in r["url"])
 
     def tarjeta(icono, titulo, cifra, texto, enlace):
-        return (f"-   :{icono}:{{ .lg .middle }} __{titulo}__\n\n    ---\n\n    **{cifra}** · {texto}\n\n"
+        return (f"-   :{icono}:{{ .lg .middle }} __{titulo}__\n\n    ---\n\n"
+                f"    <span class=\"cifra\">{cifra}</span>\n\n    {texto}\n\n"
                 f"    [{enlace[0]}]({enlace[1]})\n")
 
     tarjetas = "\n".join([
@@ -537,8 +552,10 @@ def generar_panel() -> str:
         "Fichas sin verificar, con la revisión vencida o que vencen en los próximos 90 días.\n",
         *(["| Ficha | Título | Motivo |", "|---|---|---|", *revisar] if revisar else ["Nada pendiente."]), "",
         "## Últimas verificaciones\n",
-        "| Ficha | Título | Verificada |", "|---|---|---|",
-        *[f"| [{f['meta']['id']}]({f['src_uri']}) | {f['titulo']} | {_verificado(f['meta'])} |" for f in recientes],
+        "| Ficha | Título | Estado | Verificada |", "|---|---|---|---|",
+        *[f"| [<span class=\"id\">{f['meta']['id']}</span>]({f['src_uri']}) | {f['titulo']} | "
+          f"{pill(str(f['meta'].get('estado', '—')))} | <span class=\"id\">{_verificado(f['meta'])}</span> |"
+          for f in recientes],
         "",
     ]
     return "\n".join(lineas)
