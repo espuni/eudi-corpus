@@ -1,0 +1,297 @@
+# Referencias manuales del corpus. Ver hooks/corpus.py.
+nota: Referencias que cita el corpus y no recoge el inventario (o que se completan aquí). Las del inventario están en inventario.json. Un id repetido aquí sustituye al del inventario.
+referencias:
+- id: UE 2024/1183
+  organismo: Legislación UE
+  designacion: Reglamento (UE) 2024/1183 (eIDAS 2)
+  version: ''
+  titulo: 'Modifica el Reglamento (UE) 910/2014: marco europeo de identidad digital'
+  url: https://eur-lex.europa.eu/eli/reg/2024/1183/oj
+  alias:
+  - 2024/1183
+- id: UE 2022/2065
+  organismo: Legislación UE
+  designacion: Reglamento (UE) 2022/2065 (DSA)
+  version: ''
+  titulo: Ley de Servicios Digitales; el art. 28 regula la protección de menores
+  url: https://eur-lex.europa.eu/eli/reg/2022/2065/oj
+  alias:
+  - 2022/2065
+  - art\. 28 (?:del )?DSA
+- id: UE DSA 28 directrices
+  organismo: Legislación UE
+  designacion: Directrices de la Comisión sobre el art. 28.1 del DSA
+  version: ''
+  titulo: Orientación sobre la protección de menores en línea (no vinculante)
+  url: https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors
+  alias: []
+- id: UE 2016/679
+  organismo: Legislación UE
+  designacion: Reglamento (UE) 2016/679 (RGPD)
+  version: ''
+  titulo: Reglamento general de protección de datos
+  url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+  alias:
+  - 2016/679
+  - RGPD
+- id: ARF
+  organismo: ARF
+  designacion: Architecture and Reference Framework
+  version: 3.0.0
+  fecha: '2026-07-21'
+  titulo: Marco de arquitectura y referencia de la cartera EUDI
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/v3.0.0
+  alias:
+  - ARF
+- id: EC TS01
+  organismo: Comisión Europea (TS)
+  designacion: TS01
+  version: '1.2'
+  fecha: '2026-06-03'
+  titulo: Specification of EUDI Wallet Trust Mark
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts1-eudi-wallet-trust-mark.md
+  alias:
+  - TS0?1
+- id: EC TS02
+  organismo: Comisión Europea (TS)
+  designacion: TS02
+  version: 1.0.1
+  fecha: '2026-01-30'
+  titulo: Specification of systems enabling the notification and subsequent publication of Provider information
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts2-notification-publication-provider-information.md
+  alias:
+  - TS0?2
+- id: EC TS03
+  organismo: Comisión Europea (TS)
+  designacion: TS03
+  version: 1.5.2
+  fecha: '2026-05-26'
+  titulo: Specification of Wallet Unit Attestations (WUA) used in issuance of PID and Attestations
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts3-wallet-unit-attestation.md
+  alias:
+  - TS0?3
+- id: EC TS04
+  organismo: Comisión Europea (TS)
+  designacion: TS04
+  version: 1.0.1
+  fecha: '2026-01-30'
+  titulo: Specification for Zero-Knowledge Proof (ZKP) Implementation in EUDI Wallet
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts4-zkp.md
+  alias:
+  - TS0?4
+- id: EC TS05
+  organismo: Comisión Europea (TS)
+  designacion: TS05
+  version: 1.6.1
+  fecha: '2026-11-10'
+  titulo: Common Formats and API for Relying Party Registration Information
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts5-common-formats-and-api-for-rp-registration-information.md
+  alias:
+  - TS0?5
+- id: EC TS05 (escritura)
+  organismo: Comisión Europea (TS)
+  designacion: TS05 (API de escritura)
+  version: 0.1.1
+  fecha: '2026-11-11'
+  titulo: Write API methods for Relying Party Registration information
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts5-write-api-for-rp-registration-information.md
+  alias: []
+- id: EC TS06
+  organismo: Comisión Europea (TS)
+  designacion: TS06
+  version: 1.2.2
+  fecha: '2026-08-20'
+  titulo: Common Set of Relying Party Information to be Registered
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts6-common-set-of-rp-information-to-be-registered.md
+  alias:
+  - TS0?6
+- id: EC TS07
+  organismo: Comisión Europea (TS)
+  designacion: TS07
+  version: '1.0'
+  fecha: '2026-07-12'
+  titulo: Specification of Common Interface for Data Deletion Requests to Relying Parties
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts7-common-interface-for-data-deletion-request.md
+  alias:
+  - TS0?7
+- id: EC TS08
+  organismo: Comisión Europea (TS)
+  designacion: TS08
+  version: '1.0'
+  fecha: '2026-08-12'
+  titulo: Specification of Common Interface for Lodging Complaints to DPAs
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts8-common-interface-for-reporting-of-wrp-to-dpa.md
+  alias:
+  - TS0?8
+- id: EC TS09
+  organismo: Comisión Europea (TS)
+  designacion: TS09
+  version: '1.1'
+  fecha: '2026-05-28'
+  titulo: Specification of Wallet-to-Wallet Interactions
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts9-wallet-to-wallet-interactions.md
+  alias:
+  - TS0?9
+- id: EC TS10
+  organismo: Comisión Europea (TS)
+  designacion: TS10
+  version: '1.2'
+  fecha: '2026-02-04'
+  titulo: Data Portability and Download (Export)
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts10-data-portability-and-download-%28export%29.md
+  alias:
+  - TS0?10
+- id: EC TS11
+  organismo: Comisión Europea (TS)
+  designacion: TS11
+  version: 1.0.1
+  fecha: '2026-01-30'
+  titulo: Specification of Interfaces and Formats for the Catalogue of Attestation Rulebooks and Attributes
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts11-interfaces-and-formats-for-catalogue-of-attributes-and-catalogue-of-schemes.md
+  alias:
+  - TS0?11
+- id: EC TS12
+  organismo: Comisión Europea (TS)
+  designacion: TS12
+  version: 1.0.1
+  fecha: '2026-01-30'
+  titulo: Specification of electronic payments Strong Customer Authentication (SCA) implementation with the wallet
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts12-electronic-payments-SCA-implementation-with-wallet.md
+  alias:
+  - TS0?12
+- id: EC TS13
+  organismo: Comisión Europea (TS)
+  designacion: TS13
+  version: 1.0.1
+  fecha: '2026-01-30'
+  titulo: Implementation of ZKP based on arithmetic circuits in the EUDI Wallet
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts13-zksnarks.md
+  alias:
+  - TS0?13
+- id: EC TS14
+  organismo: Comisión Europea (TS)
+  designacion: TS14
+  version: '1.0'
+  fecha: '2026-02-27'
+  titulo: Implementation of ZKP based on multimessage signatures in the EUDI Wallet
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/blob/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications/ts14-zkps-from-mms.md
+  alias:
+  - TS0?14
+- id: AV spec
+  organismo: Verificación de edad
+  designacion: Especificación principal del Blueprint de AV
+  version: commit 8b97287
+  fecha: '2026-09-02'
+  titulo: Operational, Security, Product, and Architecture Specifications
+  url: https://github.com/eu-digital-identity-wallet/av-doc-technical-specification/blob/8b9728752bd8d8eede6077ade4be8900949de2d9/docs/architecture-and-technical-specifications.md
+  alias:
+  - Spec\. (?:principal )?AV
+- id: AV anexo A
+  organismo: Verificación de edad
+  designacion: 'Anexo A: Age Verification Profile'
+  version: commit 8b97287
+  fecha: '2026-09-02'
+  titulo: Perfil normativo de interoperabilidad (emisión, presentación, ZK)
+  url: https://github.com/eu-digital-identity-wallet/av-doc-technical-specification/blob/8b9728752bd8d8eede6077ade4be8900949de2d9/docs/annexes/annex-A/annex-A-av-profile.md
+  alias:
+  - (?:AV )?anexo A
+- id: AV anexo B
+  organismo: Verificación de edad
+  designacion: 'Anexo B: Zero-Knowledge Proofs'
+  version: commit 8b97287
+  fecha: '2026-09-02'
+  titulo: Análisis de esquemas de pruebas de conocimiento cero
+  url: https://github.com/eu-digital-identity-wallet/av-doc-technical-specification/blob/8b9728752bd8d8eede6077ade4be8900949de2d9/docs/annexes/annex-B/annex-B-zkp.md
+  alias:
+  - anexo B
+- id: AV TL
+  organismo: Verificación de edad
+  designacion: Trusted List de AV
+  version: ''
+  titulo: Lista de Attestation Providers en el eIDAS Dashboard
+  url: https://eidas.ec.europa.eu/efda/trust-services/browse/av-tl
+  alias: []
+- id: ETSI TS 119 602 V1.1.1
+  organismo: ETSI
+  designacion: TS 119 602
+  version: 1.1.1
+  titulo: Listas de entidades de confianza (LoTE)
+  url: https://www.etsi.org/deliver/etsi_ts/119600_119699/119602/01.01.01_60/ts_119602v010101p.pdf
+- id: ETSI TS 119 412-6 V1.2.1
+  organismo: ETSI
+  designacion: TS 119 412-6
+  version: 1.2.1
+  titulo: Perfiles de certificado de proveedores de PID, cartera, EAA, QEAA y PuB-EAA
+  url: https://www.etsi.org/deliver/etsi_ts/119400_119499/11941206/01.02.01_60/ts_11941206v010201p.pdf
+- id: ETSI TS 119 615 V1.3.1
+  organismo: ETSI
+  designacion: TS 119 615
+  version: 1.3.1
+  titulo: Uso de las Trusted Lists para validar servicios cualificados
+  url: https://www.etsi.org/deliver/etsi_ts/119600_119699/119615/01.03.01_60/ts_119615v010301p.pdf
+- id: IETF RFC 9180
+  organismo: IETF
+  designacion: RFC 9180
+  version: ''
+  titulo: Hybrid Public Key Encryption (HPKE)
+  url: https://www.rfc-editor.org/rfc/rfc9180
+- id: IETF RFC 7638
+  organismo: IETF
+  designacion: RFC 7638
+  version: ''
+  titulo: JSON Web Key (JWK) Thumbprint
+  url: https://www.rfc-editor.org/rfc/rfc7638
+- id: IETF RFC 9101
+  organismo: IETF
+  designacion: RFC 9101
+  version: ''
+  titulo: JWT-Secured Authorization Request (JAR)
+  url: https://www.rfc-editor.org/rfc/rfc9101
+- id: IETF status list
+  organismo: IETF
+  designacion: draft-ietf-oauth-status-list
+  version: por fijar
+  titulo: Token Status List
+  url: https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/
+  alias:
+  - draft-ietf-oauth-status-list(?:-NN|-\d+)?
+  - Token Status List
+- id: IETF attestation client auth
+  organismo: IETF
+  designacion: draft-ietf-oauth-attestation-based-client-auth
+  version: por fijar
+  titulo: OAuth 2.0 Attestation-Based Client Authentication
+  url: https://datatracker.ietf.org/doc/draft-ietf-oauth-attestation-based-client-auth/
+  alias:
+  - draft-ietf-oauth-attestation-based-client-auth(?:-NN|-\d+)?
+- id: IETF libzk
+  organismo: IETF
+  designacion: draft-google-cfrg-libzk
+  version: por fijar
+  titulo: The longfellow-zk scheme
+  url: https://datatracker.ietf.org/doc/draft-google-cfrg-libzk/
+  alias:
+  - draft-google-cfrg-libzk
+- id: W3C DC API
+  organismo: W3C
+  designacion: Digital Credentials API
+  version: borrador
+  titulo: API del navegador para pedir credenciales digitales
+  url: https://github.com/w3c-fedid/digital-credentials
+  alias:
+  - Digital Credentials API
+  - DC API
+- id: ISO-IEC ISO/IEC 23220-2
+  organismo: ISO/IEC
+  designacion: ISO/IEC 23220-2
+  version: ''
+  titulo: Building blocks for identity management via mobile devices — Part 2
+  url: https://www.iso.org/search.html?q=ISO%2FIEC+23220-2
+- id: Frigo-shelat
+  organismo: Otros
+  designacion: Frigo y shelat, Anonymous credentials from ECDSA
+  version: IACR CiC vol. 3 n.º 1 (2026)
+  titulo: Esquema de pruebas de conocimiento cero que usa el perfil de AV
+  url: https://doi.org/10.62056/a3qjmpgxq
+  alias:
+  - Anonymous\s+credentials from ECDSA

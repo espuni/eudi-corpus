@@ -11,9 +11,10 @@ URL canónicas. Siempre la de la **versión** citada, no la de la última.
 
 - Repositorio: https://github.com/peppelinux/eidas-references-search-engine (Apache-2.0)
 - Informe: https://peppelinux.github.io/eidas-references-search-engine/report/index.html
-- Uso en este corpus: [`legal/actos-inventario.md`](legal/actos-inventario.md) y
-  [`legal/matriz-actos-normas.md`](legal/matriz-actos-normas.md), generados con
-  [`scripts/importar_inventario.py`](scripts/importar_inventario.py) desde un commit fijado.
+- Uso en este corpus: los actos y las citas acto → norma del
+  [catálogo de documentos referenciados](referencias/index.md), generados con
+  [`scripts/importar_inventario.py`](https://github.com/espuni/eudi-corpus/blob/main/scripts/importar_inventario.py)
+  desde un commit fijado.
   Es una fuente secundaria: sirve para descubrir qué cita cada acto, no para citarlo.
 
 ## ARF y documentación de la Comisión

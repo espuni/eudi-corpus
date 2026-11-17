@@ -2,7 +2,7 @@
 
 ## `importar_inventario.py`
 
-Genera `legal/actos-inventario.md` y `legal/matriz-actos-normas.md` a partir del
+Genera `data/inventario.json` (actos, normas que citan y citas acto → norma) a partir del
 inventario [eidas-references-search-engine](https://github.com/peppelinux/eidas-references-search-engine)
 (Giuseppe De Marco, Apache-2.0). Lee solo su `manifest.yaml` y
 `report/references-graph.json`.
@@ -14,5 +14,9 @@ python3 -I scripts/importar_inventario.py /tmp/inventario "$(git -C /tmp/inventa
 ```
 
 Requiere PyYAML. Commit importado la última vez: `300f644` (grafo del 2026-07-29).
-Al reimportar, revisar el diff: un acto nuevo o una cita nueva suele implicar
-actualizar `legal/actos.md` y alguna ficha.
+Corrige dos ids mal extraídos por el inventario (ver `CORRECCIONES`). Al
+reimportar, revisar el diff: un acto nuevo o una cita nueva suele implicar
+actualizar `docs/legal/actos.md` y alguna ficha.
+
+El sitio (`hooks/corpus.py`) combina ese fichero con `data/referencias.yml`,
+que se mantiene a mano, para generar el panel y el catálogo de documentos.

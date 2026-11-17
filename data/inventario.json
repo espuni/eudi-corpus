@@ -1,0 +1,1607 @@
+{
+ "fuente": "https://github.com/peppelinux/eidas-references-search-engine",
+ "commit": "300f644b2700439c52aad03e37611932fdb1404b",
+ "grafo_generado": "2026-07-29",
+ "actos": [
+  {
+   "id": "eidas",
+   "nombre": "Reglamento (UE) 910/2014 (eIDAS), texto consolidado",
+   "objeto": "Regulation (EU) No 910/2014 (eIDAS) — consolidated text",
+   "celex": "02014R0910-20241018",
+   "eli": "https://data.europa.eu/eli/reg/2014/910/2024-10-18/oj/eng",
+   "grupo": "marco"
+  },
+  {
+   "id": "2024-2977",
+   "nombre": "Reglamento de Ejecución (UE) 2024/2977",
+   "objeto": "PID and electronic attestations of attributes (lifecycle)",
+   "celex": "32024R2977",
+   "eli": "https://data.europa.eu/eli/reg_impl/2024/2977/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2024-2979",
+   "nombre": "Reglamento de Ejecución (UE) 2024/2979",
+   "objeto": "Integrity and core functionalities of EUDI Wallets",
+   "celex": "32024R2979",
+   "eli": "https://data.europa.eu/eli/reg_impl/2024/2979/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2024-2980",
+   "nombre": "Reglamento de Ejecución (UE) 2024/2980",
+   "objeto": "Trust framework and electronic notification system",
+   "celex": "32024R2980",
+   "eli": "https://data.europa.eu/eli/reg_impl/2024/2980/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2024-2981",
+   "nombre": "Reglamento de Ejecución (UE) 2024/2981",
+   "objeto": "Certification of EUDI Wallets",
+   "celex": "32024R2981",
+   "eli": "https://data.europa.eu/eli/reg_impl/2024/2981/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2024-2982",
+   "nombre": "Reglamento de Ejecución (UE) 2024/2982",
+   "objeto": "Protocols and interfaces for EUDI Wallets",
+   "celex": "32024R2982",
+   "eli": "https://data.europa.eu/eli/reg_impl/2024/2982/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2025-846",
+   "nombre": "Reglamento de Ejecución (UE) 2025/846",
+   "objeto": "Cross-border identity matching (public sector)",
+   "celex": "32025R0846",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/846/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2025-847",
+   "nombre": "Reglamento de Ejecución (UE) 2025/847",
+   "objeto": "Security breaches — procedures and mitigation",
+   "celex": "32025R0847",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/847/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2025-848",
+   "nombre": "Reglamento de Ejecución (UE) 2025/848",
+   "objeto": "Registration of wallet-relying parties",
+   "celex": "32025R0848",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/848/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2025-849",
+   "nombre": "Reglamento de Ejecución (UE) 2025/849",
+   "objeto": "List of certified EUDI Wallets — information submission",
+   "celex": "32025R0849",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/849/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2025-1566",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1566",
+   "objeto": "Identity and recipients of qualified certificates",
+   "celex": "32025R1566",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1566/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1567",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1567",
+   "objeto": "Remote qualified signature/seal creation devices",
+   "celex": "32025R1567",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1567/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1568",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1568",
+   "objeto": "Peer review of electronic identification schemes",
+   "celex": "32025R1568",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1568/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1569",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1569",
+   "objeto": "Verification of electronic attestations of attributes",
+   "celex": "32025R1569",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1569/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1570",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1570",
+   "objeto": "Certified qualified signature/seal creation devices (notification)",
+   "celex": "32025R1570",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1570/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1571",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1571",
+   "objeto": "Annual reports by supervisory bodies",
+   "celex": "32025R1571",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1571/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1572",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1572",
+   "objeto": "Qualified trust service applications",
+   "celex": "32025R1572",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1572/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-2160",
+   "nombre": "Reglamento de Ejecución (UE) 2025/2160",
+   "objeto": "Risk management for non-qualified trust service providers",
+   "celex": "32025R2160",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/2160/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-2162",
+   "nombre": "Reglamento de Ejecución (UE) 2025/2162",
+   "objeto": "Accreditation of conformity assessment bodies",
+   "celex": "32025R2162",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/2162/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1929",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1929",
+   "objeto": "Qualified electronic time stamps",
+   "celex": "32025R1929",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1929/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1942",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1942",
+   "objeto": "Recognition of qualified validation services",
+   "celex": "32025R1942",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1942/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1943",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1943",
+   "objeto": "Reference standards and validation procedures (QTSP)",
+   "celex": "32025R1943",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1943/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1944",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1944",
+   "objeto": "Qualified electronic registered delivery services",
+   "celex": "32025R1944",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1944/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1945",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1945",
+   "objeto": "Qualified certificates for signatures and seals",
+   "celex": "32025R1945",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1945/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-1946",
+   "nombre": "Reglamento de Ejecución (UE) 2025/1946",
+   "objeto": "Qualified preservation services for signatures and seals",
+   "celex": "32025R1946",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/1946/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-2527",
+   "nombre": "Reglamento de Ejecución (UE) 2025/2527",
+   "objeto": "Qualified certificates for website authentication",
+   "celex": "32025R2527",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/2527/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-2530",
+   "nombre": "Reglamento de Ejecución (UE) 2025/2530",
+   "objeto": "Qualified trust service providers",
+   "celex": "32025R2530",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/2530/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-2531",
+   "nombre": "Reglamento de Ejecución (UE) 2025/2531",
+   "objeto": "Qualified electronic ledgers",
+   "celex": "32025R2531",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/2531/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-2532",
+   "nombre": "Reglamento de Ejecución (UE) 2025/2532",
+   "objeto": "Qualified electronic archiving services",
+   "celex": "32025R2532",
+   "eli": "https://data.europa.eu/eli/reg_impl/2025/2532/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2026-248",
+   "nombre": "Reglamento de Ejecución (UE) 2026/248",
+   "objeto": "Formats of advanced electronic signatures and seals",
+   "celex": "32026R0248",
+   "eli": "https://data.europa.eu/eli/reg_impl/2026/248/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2026-798",
+   "nombre": "Reglamento de Ejecución (UE) 2026/798",
+   "objeto": "Remote onboarding to EUDI Wallets (eID substantial)",
+   "celex": "32026R0798",
+   "eli": "https://data.europa.eu/eli/reg_impl/2026/798/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2026-1730",
+   "nombre": "Reglamento de Ejecución (UE) 2026/1730",
+   "objeto": "Amending CIR 2025/848 — Relying Party Registration",
+   "celex": "32026R1730",
+   "eli": "https://data.europa.eu/eli/reg_impl/2026/1730/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2026-1731",
+   "nombre": "Reglamento de Ejecución (UE) 2026/1731",
+   "objeto": "Amending CIRs 2024/2977, 2979, 2980, 2982 — reference standards and specs",
+   "celex": "32026R1731",
+   "eli": "https://data.europa.eu/eli/reg_impl/2026/1731/oj/eng",
+   "grupo": "cartera"
+  },
+  {
+   "id": "2026-1735",
+   "nombre": "Reglamento de Ejecución (UE) 2026/1735",
+   "objeto": "Amending CIR 2025/1569 — electronic attestations of attributes (EAA)",
+   "celex": "32026R1735",
+   "eli": "https://data.europa.eu/eli/reg_impl/2026/1735/oj/eng",
+   "grupo": "confianza"
+  },
+  {
+   "id": "2025-2164",
+   "nombre": "Decisión de Ejecución (UE) 2025/2164",
+   "objeto": "Trusted lists of trust service providers",
+   "celex": "32025D2164",
+   "eli": "https://data.europa.eu/eli/dec_impl/2025/2164/oj/eng",
+   "grupo": "confianza"
+  }
+ ],
+ "referencias": [
+  {
+   "id": "CEN CEN/TS 18170 V2025",
+   "organismo": "CEN",
+   "designacion": "CEN/TS 18170",
+   "version": "2025",
+   "titulo": "",
+   "url": "https://standards.cencenelec.eu/dyn/www/f?p=204:32:0::::FSP_PROJECT,FSP_LANG_ID:18170,25"
+  },
+  {
+   "id": "CEN CEN/TS 419261 V2015",
+   "organismo": "CEN",
+   "designacion": "CEN/TS 419261",
+   "version": "2015",
+   "titulo": "",
+   "url": "https://standards.cencenelec.eu/dyn/www/f?p=204:32:0::::FSP_PROJECT,FSP_LANG_ID:419261,25"
+  },
+  {
+   "id": "ETSI EN 319 102-1 V1.4.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 102-1",
+   "version": "1.4.1",
+   "titulo": "ETSI EN 319 102-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319100_319199/31910201/01.04.01_60/en_31910201v010401p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 122-1 V1.3.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 122-1",
+   "version": "1.3.1",
+   "titulo": "ETSI EN 319 122-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319100_319199/31912201/01.03.01_60/en_31912201v010301p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 132-1 V1.3.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 132-1",
+   "version": "1.3.1",
+   "titulo": "ETSI EN 319 132-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319100_319199/31913201/01.03.01_60/en_31913201v010301p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 142-1 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 142-1",
+   "version": "1.2.1",
+   "titulo": "ETSI EN 319 142-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319100_319199/31914201/01.02.01_60/en_31914201v010201p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 162-1 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 162-1",
+   "version": "1.1.1",
+   "titulo": "ETSI EN 319 162-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319100_319199/31916201/01.01.01_60/en_31916201v010101p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 162-2 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 162-2",
+   "version": "1.1.1",
+   "titulo": "ETSI EN 319 162-2",
+   "url": "https://www.etsi.org/deliver/etsi_en/319100_319199/31916202/01.01.01_60/en_31916202v010101p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 401 V3.2.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 401",
+   "version": "3.2.1",
+   "titulo": "ETSI EN 319 401",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/319401/03.02.01_60/en_319401v030201p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 403-1 V2.3.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 403-1",
+   "version": "2.3.1",
+   "titulo": "ETSI EN 319 403-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/31940301/02.03.01_60/en_31940301v020301p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 411-1 V1.5.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 411-1",
+   "version": "1.5.1",
+   "titulo": "ETSI EN 319 411-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.05.01_60/en_31941101v010501p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 411-2 V2.6.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 411-2",
+   "version": "2.6.1",
+   "titulo": "ETSI EN 319 411-2",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/31941102/02.06.01_60/en_31941102v020601p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 412-2 V2.4.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 412-2",
+   "version": "2.4.1",
+   "titulo": "ETSI EN 319 412-2",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/31941202/02.04.01_60/en_31941202v020401p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 412-3 V1.3.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 412-3",
+   "version": "1.3.1",
+   "titulo": "ETSI EN 319 412-3",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/31941203/01.03.01_60/en_31941203v010301p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 421 V1.3.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 421",
+   "version": "1.3.1",
+   "titulo": "ETSI EN 319 421",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/319421/01.03.01_60/en_319421v010301p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 422 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 422",
+   "version": "1.1.1",
+   "titulo": "ETSI EN 319 422",
+   "url": "https://www.etsi.org/deliver/etsi_en/319400_319499/319422/01.01.01_60/en_319422v010101p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 521 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 521",
+   "version": "1.1.1",
+   "titulo": "ETSI EN 319 521",
+   "url": "https://www.etsi.org/deliver/etsi_en/319500_319599/319521/01.01.01_60/en_319521v010101p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 522-1 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 522-1",
+   "version": "1.2.1",
+   "titulo": "ETSI EN 319 522-1",
+   "url": "https://www.etsi.org/deliver/etsi_en/319500_319599/31952201/01.02.01_60/en_31952201v010201p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 522-2 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 522-2",
+   "version": "1.2.1",
+   "titulo": "ETSI EN 319 522-2",
+   "url": "https://www.etsi.org/deliver/etsi_en/319500_319599/31952202/01.02.01_60/en_31952202v010201p.pdf"
+  },
+  {
+   "id": "ETSI EN 319 522-3 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "EN 319 522-3",
+   "version": "1.2.1",
+   "titulo": "ETSI EN 319 522-3",
+   "url": "https://www.etsi.org/deliver/etsi_en/319500_319599/31952203/01.02.01_60/en_31952203v010201p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 101 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 101",
+   "version": "1.1.1",
+   "titulo": "ETSI TS 119 101",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119100_119199/119101/01.01.01_60/ts_119101v010101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 102-2 V1.4.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 102-2",
+   "version": "1.4.1",
+   "titulo": "ETSI TS 119 102-2",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119100_119199/11910202/01.04.01_60/ts_11910202v010401p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 172-4 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 172-4",
+   "version": "1.1.1",
+   "titulo": "ETSI TS 119 172-4",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119100_119199/11917204/01.01.01_60/ts_11917204v010101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 182-1 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 182-1",
+   "version": "1.2.1",
+   "titulo": "ETSI TS 119 182-1",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119100_119199/11918201/01.02.01_60/ts_11918201v010201p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 411-5 V2.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 411-5",
+   "version": "2.1.1",
+   "titulo": "ETSI TS 119 411-5",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/11941105/02.01.01_60/ts_11941105v020101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 411-8 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 411-8",
+   "version": "1.1.1",
+   "titulo": "ETSI TS 119 411-8",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/11941108/01.01.01_60/ts_11941108v010101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 431-1 V1.3.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 431-1",
+   "version": "1.3.1",
+   "titulo": "ETSI TS 119 431-1",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/11943101/01.03.01_60/ts_11943101v010301p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 432 V1.3.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 432",
+   "version": "1.3.1",
+   "titulo": "ETSI TS 119 432",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/119432/01.03.01_60/ts_119432v010301p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 441 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 441",
+   "version": "1.2.1",
+   "titulo": "ETSI TS 119 441",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/119441/01.02.01_60/ts_119441v010201p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 461 V2.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 461",
+   "version": "2.1.1",
+   "titulo": "ETSI TS 119 461",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/119461/02.01.01_60/ts_119461v020101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 471 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 471",
+   "version": "1.1.1",
+   "titulo": "ETSI TS 119 471",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/119471/01.01.01_60/ts_119471v010101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 472-1 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 472-1",
+   "version": "1.2.1",
+   "titulo": "ETSI TS 119 472-1",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/11947201/01.02.01_60/ts_11947201v010201p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 472-2 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 472-2",
+   "version": "1.2.1",
+   "titulo": "ETSI TS 119 472-2",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/11947202/01.02.01_60/ts_11947202v010201p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 472-3 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 472-3",
+   "version": "1.1.1",
+   "titulo": "ETSI TS 119 472-3",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/11947203/01.01.01_60/ts_11947203v010101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 475 V1.2.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 475",
+   "version": "1.2.1",
+   "titulo": "ETSI TS 119 475",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/119475/01.02.01_60/ts_119475v010201p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 478 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 478",
+   "version": "1.1.1",
+   "titulo": "ETSI TS 119 478",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/119478/01.01.01_60/ts_119478v010101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 495 V1.7.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 495",
+   "version": "1.7.1",
+   "titulo": "ETSI TS 119 495",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119400_119499/119495/01.07.01_60/ts_119495v010701p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 511 V1.1.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 511",
+   "version": "1.1.1",
+   "titulo": "ETSI TS 119 511",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119500_119599/119511/01.01.01_60/ts_119511v010101p.pdf"
+  },
+  {
+   "id": "ETSI TS 119 612 V2.4.1",
+   "organismo": "ETSI",
+   "designacion": "TS 119 612",
+   "version": "2.4.1",
+   "titulo": "ETSI TS 119 612",
+   "url": "https://www.etsi.org/deliver/etsi_ts/119600_119699/119612/02.04.01_60/ts_119612v020401p.pdf"
+  },
+  {
+   "id": "IETF RFC 3161",
+   "organismo": "IETF",
+   "designacion": "RFC 3161",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc3161.txt"
+  },
+  {
+   "id": "IETF RFC 3339",
+   "organismo": "IETF",
+   "designacion": "RFC 3339",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc3339.txt"
+  },
+  {
+   "id": "IETF RFC 3647",
+   "organismo": "IETF",
+   "designacion": "RFC 3647",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc3647.txt"
+  },
+  {
+   "id": "IETF RFC 3739",
+   "organismo": "IETF",
+   "designacion": "RFC 3739",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc3739.txt"
+  },
+  {
+   "id": "IETF RFC 5280",
+   "organismo": "IETF",
+   "designacion": "RFC 5280",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc5280.txt"
+  },
+  {
+   "id": "IETF RFC 5322",
+   "organismo": "IETF",
+   "designacion": "RFC 5322",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc5322.txt"
+  },
+  {
+   "id": "IETF RFC 7515",
+   "organismo": "IETF",
+   "designacion": "RFC 7515",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc7515.txt"
+  },
+  {
+   "id": "IETF RFC 7519",
+   "organismo": "IETF",
+   "designacion": "RFC 7519",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc7519.txt"
+  },
+  {
+   "id": "IETF RFC 7800",
+   "organismo": "IETF",
+   "designacion": "RFC 7800",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc7800.txt"
+  },
+  {
+   "id": "IETF RFC 8392",
+   "organismo": "IETF",
+   "designacion": "RFC 8392",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc8392.txt"
+  },
+  {
+   "id": "IETF RFC 8610",
+   "organismo": "IETF",
+   "designacion": "RFC 8610",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc8610.txt"
+  },
+  {
+   "id": "IETF RFC 8943",
+   "organismo": "IETF",
+   "designacion": "RFC 8943",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc8943.txt"
+  },
+  {
+   "id": "IETF RFC 8949",
+   "organismo": "IETF",
+   "designacion": "RFC 8949",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc8949.txt"
+  },
+  {
+   "id": "IETF RFC 9110",
+   "organismo": "IETF",
+   "designacion": "RFC 9110",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc9110.txt"
+  },
+  {
+   "id": "IETF RFC 9360",
+   "organismo": "IETF",
+   "designacion": "RFC 9360",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.rfc-editor.org/rfc/rfc9360.txt"
+  },
+  {
+   "id": "IETF SD-JWT",
+   "organismo": "IETF",
+   "designacion": "SD-JWT",
+   "version": "",
+   "titulo": "Selective Disclosure for JWTs (RFC 9901)",
+   "url": "https://www.rfc-editor.org/rfc/rfc9901.txt"
+  },
+  {
+   "id": "IETF SD-JWT VC",
+   "organismo": "IETF",
+   "designacion": "SD-JWT VC",
+   "version": "",
+   "titulo": "SD-JWT-based Verifiable Credentials",
+   "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-17.html"
+  },
+  {
+   "id": "ISO-IEC ISO 14641",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 14641",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+14641"
+  },
+  {
+   "id": "ISO-IEC ISO 14721 V2025",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 14721",
+   "version": "2025",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+14721"
+  },
+  {
+   "id": "ISO-IEC ISO 19794-5",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 19794-5",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+19794-5"
+  },
+  {
+   "id": "ISO-IEC ISO 23257 V2022",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 23257",
+   "version": "2022",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+23257"
+  },
+  {
+   "id": "ISO-IEC ISO 3166",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 3166",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+3166"
+  },
+  {
+   "id": "ISO-IEC ISO 3166-1 V2006",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 3166-1",
+   "version": "2006",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+3166-1"
+  },
+  {
+   "id": "ISO-IEC ISO 3166-2 V2020",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 3166-2",
+   "version": "2020",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+3166-2"
+  },
+  {
+   "id": "ISO-IEC ISO 39794",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 39794",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+39794"
+  },
+  {
+   "id": "ISO-IEC ISO 639",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 639",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+639"
+  },
+  {
+   "id": "ISO-IEC ISO 8601-1",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO 8601-1",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO+8601-1"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 15408 V2022",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 15408",
+   "version": "2022",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+15408"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 15408-1 V2022",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 15408-1",
+   "version": "2022",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+15408-1"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 15408-3 V2022",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 15408-3",
+   "version": "2022",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+15408-3"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17000 V2020",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17000",
+   "version": "2020",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17000"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17011 V2017",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17011",
+   "version": "2017",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17011"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17020 V2012",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17020",
+   "version": "2012",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17020"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17021-1 V2015",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17021-1",
+   "version": "2015",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17021-1"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17025 V2017",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17025",
+   "version": "2017",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17025"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17029 V2019",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17029",
+   "version": "2019",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17029"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17065 V2012",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17065",
+   "version": "2012",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17065"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 17067 V2013",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 17067",
+   "version": "2013",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+17067"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 18013",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 18013",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+18013"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 18013-5 V2021",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 18013-5",
+   "version": "2021",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+18013-5"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 18013-7 V2025",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 18013-7",
+   "version": "2025",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+18013-7"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 19794-5",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 19794-5",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+19794-5"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 27001 V2022",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 27001",
+   "version": "2022",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+27001"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 30111 V2019",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 30111",
+   "version": "2019",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+30111"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 39794-5",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 39794-5",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+39794-5"
+  },
+  {
+   "id": "ISO-IEC ISO/IEC 5218",
+   "organismo": "ISO/IEC",
+   "designacion": "ISO/IEC 5218",
+   "version": "",
+   "titulo": "",
+   "url": "https://www.iso.org/search.html?q=ISO%2FIEC+5218"
+  },
+  {
+   "id": "OpenID OpenID4VC-HAIP V1.0",
+   "organismo": "OpenID",
+   "designacion": "OpenID4VC-HAIP",
+   "version": "1.0",
+   "titulo": "OpenID4VC High Assurance Interoperability Profile",
+   "url": "https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0-final.html"
+  },
+  {
+   "id": "OpenID OpenID4VCI V1.0",
+   "organismo": "OpenID",
+   "designacion": "OpenID4VCI",
+   "version": "1.0",
+   "titulo": "OpenID for Verifiable Credential Issuance",
+   "url": "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html"
+  },
+  {
+   "id": "OpenID OpenID4VP V1.0",
+   "organismo": "OpenID",
+   "designacion": "OpenID4VP",
+   "version": "1.0",
+   "titulo": "OpenID for Verifiable Presentations",
+   "url": "https://openid.net/specs/openid-4-verifiable-presentations-1_0.html"
+  },
+  {
+   "id": "W3C vc-data-model V1.1",
+   "organismo": "W3C",
+   "designacion": "vc-data-model",
+   "version": "1.1",
+   "titulo": "Verifiable Credentials Data Model 1.1",
+   "url": "https://www.w3.org/TR/vc-data-model/"
+  }
+ ],
+ "citas": [
+  {
+   "acto": "2024-2977",
+   "ref": "IETF RFC 5322"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "ISO-IEC ISO 19794-5"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "ISO-IEC ISO 3166"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "ISO-IEC ISO 3166-1 V2006"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "ISO-IEC ISO 3166-2 V2020"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "ISO-IEC ISO 39794"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "ISO-IEC ISO/IEC 18013-5 V2021"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "ISO-IEC ISO/IEC 5218"
+  },
+  {
+   "acto": "2024-2977",
+   "ref": "W3C vc-data-model V1.1"
+  },
+  {
+   "acto": "2024-2979",
+   "ref": "ETSI EN 319 122-1 V1.3.1"
+  },
+  {
+   "acto": "2024-2979",
+   "ref": "ETSI EN 319 132-1 V1.3.1"
+  },
+  {
+   "acto": "2024-2979",
+   "ref": "ETSI EN 319 142-1 V1.2.1"
+  },
+  {
+   "acto": "2024-2979",
+   "ref": "ETSI EN 319 162-1 V1.1.1"
+  },
+  {
+   "acto": "2024-2979",
+   "ref": "ETSI EN 319 162-2 V1.1.1"
+  },
+  {
+   "acto": "2024-2979",
+   "ref": "ETSI TS 119 182-1 V1.2.1"
+  },
+  {
+   "acto": "2024-2979",
+   "ref": "W3C vc-data-model V1.1"
+  },
+  {
+   "acto": "2024-2980",
+   "ref": "IETF RFC 3647"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 15408-3 V2022"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 17000 V2020"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 17020 V2012"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 17021-1 V2015"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 17025 V2017"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 17029 V2019"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 17065 V2012"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 17067 V2013"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 27001 V2022"
+  },
+  {
+   "acto": "2024-2981",
+   "ref": "ISO-IEC ISO/IEC 30111 V2019"
+  },
+  {
+   "acto": "2024-2982",
+   "ref": "ISO-IEC ISO/IEC 18013-5 V2021"
+  },
+  {
+   "acto": "2025-1566",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1566",
+   "ref": "ETSI TS 119 461 V2.1.1"
+  },
+  {
+   "acto": "2025-1567",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1567",
+   "ref": "ETSI TS 119 431-1 V1.3.1"
+  },
+  {
+   "acto": "2025-1568",
+   "ref": "ISO-IEC ISO/IEC 27001 V2022"
+  },
+  {
+   "acto": "2025-1569",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1929",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1929",
+   "ref": "ETSI EN 319 421 V1.3.1"
+  },
+  {
+   "acto": "2025-1929",
+   "ref": "ETSI EN 319 422 V1.1.1"
+  },
+  {
+   "acto": "2025-1929",
+   "ref": "IETF RFC 3161"
+  },
+  {
+   "acto": "2025-1929",
+   "ref": "IETF RFC 3739"
+  },
+  {
+   "acto": "2025-1929",
+   "ref": "IETF RFC 9110"
+  },
+  {
+   "acto": "2025-1929",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ETSI EN 319 102-1 V1.4.1"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ETSI TS 119 101 V1.1.1"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ETSI TS 119 102-2 V1.4.1"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ETSI TS 119 172-4 V1.1.1"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ETSI TS 119 441 V1.2.1"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ETSI TS 119 612 V2.4.1"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2025-1942",
+   "ref": "ISO-IEC ISO/IEC 15408-1 V2022"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "CEN CEN/TS 419261 V2015"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "ETSI EN 319 411-1 V1.5.1"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "ETSI EN 319 411-2 V2.6.1"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "ETSI EN 319 412-2 V2.4.1"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "ETSI EN 319 412-3 V1.3.1"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "IETF RFC 5280"
+  },
+  {
+   "acto": "2025-1943",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ETSI EN 319 411-1 V1.5.1"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ETSI EN 319 521 V1.1.1"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ETSI EN 319 522-1 V1.2.1"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ETSI EN 319 522-2 V1.2.1"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ETSI EN 319 522-3 V1.2.1"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2025-1944",
+   "ref": "ISO-IEC ISO/IEC 15408-1 V2022"
+  },
+  {
+   "acto": "2025-1945",
+   "ref": "ETSI EN 319 102-1 V1.4.1"
+  },
+  {
+   "acto": "2025-1945",
+   "ref": "ETSI TS 119 101 V1.1.1"
+  },
+  {
+   "acto": "2025-1945",
+   "ref": "ETSI TS 119 102-2 V1.4.1"
+  },
+  {
+   "acto": "2025-1945",
+   "ref": "ETSI TS 119 172-4 V1.1.1"
+  },
+  {
+   "acto": "2025-1945",
+   "ref": "ETSI TS 119 612 V2.4.1"
+  },
+  {
+   "acto": "2025-1946",
+   "ref": "ETSI EN 319 102-1 V1.4.1"
+  },
+  {
+   "acto": "2025-1946",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-1946",
+   "ref": "ETSI TS 119 101 V1.1.1"
+  },
+  {
+   "acto": "2025-1946",
+   "ref": "ETSI TS 119 172-4 V1.1.1"
+  },
+  {
+   "acto": "2025-1946",
+   "ref": "ETSI TS 119 511 V1.1.1"
+  },
+  {
+   "acto": "2025-1946",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2025-2160",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "CEN CEN/TS 18170 V2025"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ETSI EN 319 403-1 V2.3.1"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ETSI TS 119 612 V2.4.1"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "IETF RFC 5280"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO 14641"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO 14721 V2025"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO 23257 V2022"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO/IEC 17011 V2017"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO/IEC 17020 V2012"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO/IEC 17021-1 V2015"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO/IEC 17025 V2017"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO/IEC 17065 V2012"
+  },
+  {
+   "acto": "2025-2162",
+   "ref": "ISO-IEC ISO/IEC 17067 V2013"
+  },
+  {
+   "acto": "2025-2164",
+   "ref": "ETSI TS 119 612 V2.4.1"
+  },
+  {
+   "acto": "2025-2164",
+   "ref": "ISO-IEC ISO 3166-1 V2006"
+  },
+  {
+   "acto": "2025-2527",
+   "ref": "ETSI EN 319 411-2 V2.6.1"
+  },
+  {
+   "acto": "2025-2527",
+   "ref": "ETSI TS 119 411-5 V2.1.1"
+  },
+  {
+   "acto": "2025-2527",
+   "ref": "ETSI TS 119 495 V1.7.1"
+  },
+  {
+   "acto": "2025-2531",
+   "ref": "ETSI EN 319 122-1 V1.3.1"
+  },
+  {
+   "acto": "2025-2531",
+   "ref": "ETSI EN 319 132-1 V1.3.1"
+  },
+  {
+   "acto": "2025-2531",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-2531",
+   "ref": "ETSI TS 119 182-1 V1.2.1"
+  },
+  {
+   "acto": "2025-2531",
+   "ref": "IETF RFC 7515"
+  },
+  {
+   "acto": "2025-2531",
+   "ref": "ISO-IEC ISO 23257 V2022"
+  },
+  {
+   "acto": "2025-2531",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2025-2532",
+   "ref": "CEN CEN/TS 18170 V2025"
+  },
+  {
+   "acto": "2025-2532",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2025-2532",
+   "ref": "ETSI EN 319 421 V1.3.1"
+  },
+  {
+   "acto": "2025-2532",
+   "ref": "ISO-IEC ISO 14721 V2025"
+  },
+  {
+   "acto": "2025-2532",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2025-848",
+   "ref": "IETF RFC 7519"
+  },
+  {
+   "acto": "2025-848",
+   "ref": "IETF RFC 8392"
+  },
+  {
+   "acto": "2025-848",
+   "ref": "ISO-IEC ISO 3166-1 V2006"
+  },
+  {
+   "acto": "2026-1730",
+   "ref": "ETSI TS 119 411-8 V1.1.1"
+  },
+  {
+   "acto": "2026-1730",
+   "ref": "ETSI TS 119 475 V1.2.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ETSI EN 319 142-1 V1.2.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ETSI EN 319 412-2 V2.4.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ETSI EN 319 412-3 V1.3.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ETSI TS 119 432 V1.3.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ETSI TS 119 472-1 V1.2.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ETSI TS 119 472-2 V1.2.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ETSI TS 119 472-3 V1.1.1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 3339"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 5322"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 7515"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 7519"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 7800"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 8610"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 8943"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 8949"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF RFC 9360"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF SD-JWT"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "IETF SD-JWT VC"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO 3166"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO 3166-1 V2006"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO 3166-2 V2020"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO 639"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO 8601-1"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO/IEC 18013"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO/IEC 18013-5 V2021"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO/IEC 18013-7 V2025"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO/IEC 19794-5"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO/IEC 39794-5"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "ISO-IEC ISO/IEC 5218"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "OpenID OpenID4VC-HAIP V1.0"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "OpenID OpenID4VCI V1.0"
+  },
+  {
+   "acto": "2026-1731",
+   "ref": "OpenID OpenID4VP V1.0"
+  },
+  {
+   "acto": "2026-1735",
+   "ref": "ETSI EN 319 401 V3.2.1"
+  },
+  {
+   "acto": "2026-1735",
+   "ref": "ETSI TS 119 471 V1.1.1"
+  },
+  {
+   "acto": "2026-1735",
+   "ref": "ETSI TS 119 478 V1.1.1"
+  },
+  {
+   "acto": "2026-1735",
+   "ref": "ISO-IEC ISO/IEC 15408 V2022"
+  },
+  {
+   "acto": "2026-248",
+   "ref": "IETF RFC 7515"
+  },
+  {
+   "acto": "2026-798",
+   "ref": "ETSI TS 119 461 V2.1.1"
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+site_name: eudi-corpus
+site_description: Corpus de conocimiento sobre eIDAS 2, la cartera EUDI, ARF, ETSI, ISO, OpenID4VC y verificación de edad.
+site_url: https://espuni.github.io/eudi-corpus/
+repo_url: https://github.com/espuni/eudi-corpus
+repo_name: espuni/eudi-corpus
+edit_uri: edit/main/docs/
+copyright: Textos propios bajo CC BY 4.0. Las normas citadas pertenecen a sus autores.
+
+docs_dir: docs
+hooks:
+  - hooks/corpus.py
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: es
+
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: info
+    unrecognized_links: warn
+
+nav:
+  - Panel: index.md
+  - Método: metodo.md
+  - Legal:
+      - legal/actos.md
+  - ARF:
+      - arf/README.md
+      - arf/especificaciones-tecnicas.md
+  - Protocolos:
+      - protocolos/README.md
+      - protocolos/perfiles-oid4vp-identificacion-del-verifier.md
+  - Formatos: formatos/README.md
+  - Confianza y PKI: confianza/README.md
+  - Verificación de edad:
+      - edad/README.md
+      - edad/blueprint-av.md
+      - edad/perfil-presentacion-av.md
+      - edad/trusted-list-av.md
+  - Observaciones:
+      - observaciones/README.md
+      - observaciones/zk-cross-device.md
+  - Criterios:
+      - criterios/README.md
+      - criterios/lista-caducada.md
+      - criterios/fijar-firmante-de-la-lista.md
+      - criterios/sin-lista-no-se-valida.md
+  - Evaluación: evaluacion/preguntas.md
+  - Documentos referenciados:
+      - referencias/index.md
+      - referencias/legislacion.md
+      - referencias/arf.md
+      - referencias/verificacion-edad.md
+      - referencias/etsi.md
+      - referencias/iso-iec.md
+      - referencias/ietf.md
+      - referencias/openid.md
+      - referencias/w3c.md
+      - referencias/cen.md
+      - referencias/otros.md
+  - Glosario: glosario.md
+  - Fuentes: fuentes.md
+  - Plantillas:
+      - plantillas/ficha.md
+      - plantillas/criterio.md
+      - plantillas/pregunta.md

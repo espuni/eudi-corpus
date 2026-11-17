@@ -10,10 +10,9 @@ revisar_antes:
 # Tracker de actos legales
 
 Tracker editable: aquí se anotan fechas de aplicación, modificaciones y la
-verificación. La lista completa de actos, con CELEX y ELI, se genera desde el
-inventario de Giuseppe De Marco en [`actos-inventario.md`](actos-inventario.md),
-y la matriz de qué norma cita cada acto en
-[`matriz-actos-normas.md`](matriz-actos-normas.md).
+verificación. La lista completa de actos, con CELEX, ELI y las normas que cita
+cada uno, se genera desde el inventario de Giuseppe De Marco en
+[Legislación de la UE](../referencias/legislacion.md).
 
 **Nada de esta tabla está verificado todavía.** Hay que confirmar cada fila en
 EUR-Lex (columna *Verificado*), en especial las fechas de aplicación.
@@ -48,8 +47,8 @@ reglamento de ejecución `https://eur-lex.europa.eu/eli/reg_impl/AAAA/NNNN/oj`.
 | LEG-023 | Decisión de Ejecución (UE) 2025/2164 | Listas de confianza de prestadores de servicios de confianza (cita TS 119 612 V2.4.1) | Confianza | | | — |
 
 El resto de actos de servicios de confianza está en
-[`actos-inventario.md`](actos-inventario.md); se traen aquí cuando una ficha los
-necesite.
+[Legislación de la UE](../referencias/legislacion.md); se traen aquí cuando una
+ficha los necesite.
 
 ## Otros marcos que se cruzan
 

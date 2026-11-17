@@ -1,0 +1,4 @@
+# Dependencias para construir el sitio (mkdocs build --strict).
+mkdocs==1.6.1
+mkdocs-material==9.6.23
+PyYAML==6.0.2
