@@ -2,10 +2,10 @@
 id: CNF-009
 titulo: "Mapa de listas: qué Trusted List o LoTE ancla a cada actor"
 procedencia: mixta          # norma (§1-§2) · criterio (§3)
-fuente: "CIR 2024/2980 art. 5 (redacción de 2026/1731); eIDAS art. 22 y 45f.3; ARF v3.0.0 3.5, 6.2.2, 6.2.3, 6.3.2.4, 6.3.3"
+fuente: "CIR 2024/2980 art. 5 (redacción de 2026/1731); eIDAS art. 22 y 45f.3; ARF v3.0.0 3.5, 6.2.2, 6.2.3, 6.3.2.4, 6.3.3; ETSI TS 119 602 V1.1.1 anexos D a I"
 version_fuente: "textos oficiales vía inventario 300f644; ARF v3.0.0"
 url: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/v3.0.0/docs/main/03-roles-within-the-eudi-wallet-ecosystem.md
-requisitos: ["2024/2980 art. 5.1 y 5.2", "eIDAS art. 22", "eIDAS art. 45f.3", "ARF 3.5", "ARF 6.3.2.4"]
+requisitos: ["2024/2980 art. 5.1 y 5.2", "eIDAS art. 22", "eIDAS art. 45f.3", "ARF 3.5", "ARF 6.3.2.4", "TS 119 602 tablas D.3, E, F, G, H, I"]
 estado: borrador
 verificado: 2026-11-18
 revisar_antes: 2027-05-01
@@ -48,18 +48,32 @@ La Comisión publica las ubicaciones de las LoTE en el Diario Oficial (ARF 3.5).
 - **Partes usuarias**: no hay lista, porque serían demasiadas. La cartera las
   autentica por su certificado de acceso, que encadena hasta la LoTE de
   Access CA (ARF 3.5).
-- **Pérdida de confianza**: según el ARF, una entidad **nunca se quita** de una
-  Trusted List o LoTE; se cambia su estado a **Invalid** (ARF 3.5, 6.2.3 y
-  6.3.3). Una cartera de un proveedor invalidado deja de recibir PID y
-  atestaciones, y el proveedor revoca sus unidades.
+## 3. Pérdida de confianza: ETSI y el ARF no dicen lo mismo
 
-## 3. Discrepancia pendiente (procedencia: criterio)
+**ETSI TS 119 602 V1.1.1**, que define el formato de las LoTE:
 
-Hay quien afirma que en la LoTE de proveedores de PID **no hay
-estado de servicio** y que al proveedor se le **quita** de la lista (citan
-ETSI TS 119 602, tabla D.3). El ARF v3.0.0 dice lo contrario: nunca se quita,
-se marca como Invalid. No se ha podido comprobar el texto de ETSI.
+| Lista | ¿Estado de servicio? | Cuando deja de ser de confianza |
+|---|---|---|
+| Proveedores de PID (anexo D, tabla D.3) | **No**: `ServiceStatus` no se usa | Se **quita** de la lista |
+| Proveedores de cartera (anexo E) | No | Se quita |
+| Proveedores de certificados de acceso (anexo F) | No | Se quita |
+| Proveedores de certificados de registro (anexo G) | No | Se quita |
+| Registradores y registros (anexo I) | No | Se quita |
+| Organismos PuB-EAA (anexo H) | **Sí**: `notified` o `withdrawn` | Pasa a `withdrawn` |
 
-Mientras no se resuelva, el criterio prudente para quien valida es tratar como
-no confiable **las dos cosas**: una entidad que ya no aparece en la lista y una
-que aparece con estado distinto de válido.
+En las listas sin estado, estar en la lista significa estar notificado y en
+activo ahora mismo, y no sirven para comprobar la situación en una fecha
+pasada: la historia se obtiene de las versiones anteriores de la lista.
+
+**El ARF v3.0.0** dice lo contrario: una entidad **nunca se quita** de una
+Trusted List o LoTE, sino que su estado pasa a **Invalid** (ARF 3.5, 6.2.3 y
+6.3.3).
+
+Ninguno de los dos es vinculante por sí mismo: los actos de ejecución no citan
+TS 119 602. Pero quien valida **consume listas con el formato de ETSI**, así
+que manda lo que define ETSI.
+
+**Criterio** (procedencia: criterio): tratar como no confiable tanto una
+entidad que ya no aparece en la lista como una que aparece con un estado
+distinto de válido. Así el validador funciona con las dos lecturas, y también
+si una versión futura de TS 119 602 adopta la del ARF.

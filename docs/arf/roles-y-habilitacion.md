@@ -2,10 +2,10 @@
 id: ARF-001
 titulo: "Roles del ecosistema: quién los habilita, qué certificados reciben y cuáles son QTSP"
 procedencia: mixta          # norma (§1-§3) · criterio (§4)
-fuente: "eIDAS consolidado (2024-10-18); CIR 2025/848 modificado por 2026/1730; CIR 2024/2980 modificado por 2026/1731; ARF v3.0.0 cap. 3 y 6"
+fuente: "eIDAS consolidado (2024-10-18); CIR 2025/848 modificado por 2026/1730; CIR 2024/2980 modificado por 2026/1731; ARF v3.0.0 cap. 3 y 6; ETSI TS 119 411-8 V1.1.1, TS 119 475 V1.2.1, TS 119 412-6 V1.2.1"
 version_fuente: "textos oficiales vía inventario 300f644; ARF v3.0.0"
 url: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/v3.0.0/docs/main/03-roles-within-the-eudi-wallet-ecosystem.md
-requisitos: ["eIDAS art. 3(45) y 3(46)", "eIDAS art. 45d y 45f", "2025/848 art. 7.1 y 8.1", "2024/2980 art. 5", "ARF 3.5, 3.18, 3.19, 6.2.2, 6.3.2.3, 6.3.2.4"]
+requisitos: ["eIDAS art. 3(45) y 3(46)", "eIDAS art. 45d y 45f", "2025/848 art. 7.1 y 8.1", "2024/2980 art. 5", "ARF 3.5, 3.18, 3.19, 6.2.2, 6.3.2.3, 6.3.2.4", "TS 119 411-8 OVR-4.2.2-02", "TS 119 475 cl. 4.4", "TS 119 412-6 PID-4.5-01, QEA-7.1-03, PSB-8.3-01 a -05"]
 estado: borrador
 verificado: 2026-11-18
 revisar_antes: 2027-05-01
@@ -53,18 +53,23 @@ eIDAS. Por eso van en una LoTE y no en una Trusted List (ARF 3.5).
 En la versión española de eIDAS, el art. 45d es el **45 quinquies** y el 45f
 el **45 septies**.
 
-## 3. Lo que depende de ETSI y no se ha verificado aquí
+## 3. Lo que añaden las normas ETSI
 
-Estos puntos se citan a menudo y son plausibles, pero no se han
-podido comprobar contra el texto de ETSI. ETSI no permite la descarga
-automatizada desde el entorno donde se escribió esta ficha:
-
-- el proveedor de certificados de acceso aplica como mínimo la política NCP, y
-  las políticas cualificadas son opcionales (TS 119 411-8);
-- el proveedor de certificados de registro puede figurar como cualificado o no
-  (TS 119 475);
-- el certificado del proveedor de PID lleva el QcType `id-etsi-qct-pid`, y el
-  del organismo PuB-EAA, el `QcPSB` (TS 119 412-6).
+- **Proveedor de certificados de acceso:** su política y su declaración de
+  prácticas cumplen **como mínimo la política NCP** de ETSI EN 319 411-1
+  (TS 119 411-8, OVR-4.2.2-02). La norma define cuatro políticas: dos
+  normalizadas (`NCP-n-eudiwrp`, `NCP-l-eudiwrp`) y dos cualificadas
+  (`QCP-n-eudiwrp`, `QCP-l-eudiwrp`), que son opcionales (cl. 5.5).
+- **Proveedor de certificados de registro:** es un prestador de servicios de
+  confianza que puede figurar en la Trusted List **como cualificado o como no
+  cualificado** (TS 119 475, cl. 4.4).
+- **Perfiles de certificado** (TS 119 412-6):
+  - proveedor de PID: el certificado lleva el QcType `id-etsi-qct-pid`
+    (PID-4.5-01);
+  - proveedor de QEAA: el emisor del certificado es un QTSP (QEA-7.1-03);
+  - organismo PuB-EAA: el certificado lleva el `QcPSB`, con la ley que lo
+    habilita, la fuente auténtica y los países de la ley aplicable
+    (PSB-8.3-01 a -05).
 
 ## 4. Nivel de garantía (procedencia: criterio)
 

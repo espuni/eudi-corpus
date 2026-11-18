@@ -12,8 +12,10 @@
 | CNF-008 | Perfil de emisión | ETSI TS 119 472-3 V1.1.1 (citada por 2026/1731) | pendiente |
 | [CNF-009](listas-y-anclas.md) | Mapa de listas: qué Trusted List o LoTE ancla a cada actor | 2024/2980, eIDAS, ARF v3.0.0 | borrador |
 
-Las versiones de ETSI salen del inventario de referencias (julio de 2026) y
-**no se han comprobado** contra el catálogo de ETSI, que no es accesible desde
-el entorno donde se preparó el corpus. Verificar el
+Versiones comprobadas el 2026-11-18 contra el texto publicado por ETSI:
+TS 119 411-8 V1.1.1 (2025-10), TS 119 475 V1.2.1 (2026-03), TS 119 412-6
+V1.2.1 (2026-04) y TS 119 602 V1.1.1 (2025-11), que son las últimas
+publicadas. El resto salen del inventario de referencias y están sin
+comprobar. Verificar el
 título oficial y la versión vigente de cada TS en el catálogo de ETSI antes de
 pasar a `revisado`.

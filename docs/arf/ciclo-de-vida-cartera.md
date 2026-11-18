@@ -69,9 +69,11 @@ Los proveedores de atestaciones pueden usar el mismo mecanismo que los de PID
 
 ## 4. Pérdida de confianza en un proveedor (ARF)
 
-- **Proveedor de cartera invalidado**: el Estado pide cambiar su estado en la
-  LoTE a Invalid; los emisores dejan de confiar en sus WIA y KA, y el
-  proveedor revoca sus unidades (ARF 6.2.3).
+- **Proveedor de cartera invalidado**: según el ARF, el Estado pide cambiar su
+  estado en la LoTE a Invalid; los emisores dejan de confiar en sus WIA y KA, y
+  el proveedor revoca sus unidades (ARF 6.2.3). En el formato de ETSI
+  TS 119 602 esa lista no tiene estado: el proveedor **se quita** de la lista
+  (ver [CNF-009](../confianza/listas-y-anclas.md)).
 - **Proveedor de PID o de atestaciones con el registro suspendido o
   cancelado**: se revocan sus certificados de acceso, su estado pasa a Invalid
   en la lista que le corresponda, y revoca lo que emitió (ARF 6.3.3).

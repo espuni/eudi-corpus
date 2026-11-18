@@ -18,6 +18,8 @@ Solo entran preguntas cuya respuesta esté **verificada** contra la fuente.
 | EVA-007 | Si se revoca la WUA de una unidad, ¿qué pasa con el PID que tiene? | El proveedor de PID tiene que revocarlo, de forma irreversible | 2024/2977 art. 5.4.b y 5.5 | Creer que la regla vale igual para cualquier EAA |
 | EVA-008 | ¿Dónde se ancla la confianza en un proveedor de QEAA y en uno de PID? | QEAA: Trusted List nacional (TS 119 612). PID: LoTE de la Comisión (TS 119 602) | ARF 3.5; eIDAS art. 22 | Buscar las QEAA en una LoTE |
 | EVA-009 | ¿Recibe un proveedor de cartera certificado de acceso o de registro? | No: no se registra; se notifica y sus anclas van a la LoTE de proveedores de cartera | ARF 6.2.2 | Tratarlo como una parte usuaria más |
+| EVA-011 | ¿Qué política mínima aplica el proveedor de certificados de acceso? | La NCP de ETSI EN 319 411-1; las políticas cualificadas son opcionales | TS 119 411-8, OVR-4.2.2-02 | Suponer que tiene que ser QCP |
+| EVA-012 | Si un proveedor de PID deja de ser de confianza, ¿cómo se refleja en su LoTE? | Se quita de la lista: esa LoTE no tiene estado de servicio (el ARF dice que se marca Invalid; manda el formato de ETSI) | TS 119 602, tabla D.3 | Buscar un estado «Invalid» que no existe en ese perfil |
 | EVA-010 | ¿Qué plazo hay para retirar una solución suspendida cuya brecha no se ha remediado? | Tres meses desde la suspensión; la retirada, en 72 h tras ese plazo | 2025/847 art. 8.1 | Confundir las 72 h con las 24 h de aviso |
 
 ## Resultados

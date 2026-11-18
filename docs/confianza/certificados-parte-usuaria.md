@@ -2,10 +2,10 @@
 id: CNF-003
 titulo: "Certificados de acceso (WRPAC) y de registro (WRPRC): qué es cada uno y qué comprueba la cartera"
 procedencia: mixta          # norma (§1-§3) · criterio (§4)
-fuente: "CIR 2025/848 modificado por 2026/1730; CIR 2024/2982 modificado por 2026/1731; ARF v3.0.0 3.18, 3.19, 6.3.2.3"
+fuente: "CIR 2025/848 modificado por 2026/1730; CIR 2024/2982 modificado por 2026/1731; ARF v3.0.0 3.18, 3.19, 6.3.2.3; ETSI TS 119 411-8 V1.1.1; ETSI TS 119 475 V1.2.1"
 version_fuente: "textos oficiales vía inventario 300f644; ARF v3.0.0"
 url: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/v3.0.0/docs/main/03-roles-within-the-eudi-wallet-ecosystem.md
-requisitos: ["2025/848 art. 7 y 8", "2026/1730 art. 1.4", "2024/2982 art. 3 y 8 (redacción de 2026/1731)", "ARF 3.18, 3.19"]
+requisitos: ["2025/848 art. 7 y 8", "2026/1730 art. 1.4", "2024/2982 art. 3 y 8 (redacción de 2026/1731)", "ARF 3.18, 3.19", "TS 119 411-8 OVR-4.2.2-02", "TS 119 475 cl. 4.4, GEN-5.2.1-01 a -03"]
 estado: borrador
 verificado: 2026-11-18
 revisar_antes: 2027-05-01
@@ -26,7 +26,7 @@ solo desde el **11 de agosto de 2028**.
 
 | | Certificado de acceso (WRPAC) | Certificado de registro (WRPRC) |
 |---|---|---|
-| Qué es | Certificado X.509 (RFC 5280, ETSI TS 119 411-8) | JWT firmado (RFC 7519), **no** un certificado X.509 (ARF 3.19) |
+| Qué es | Certificado X.509 (RFC 5280, ETSI TS 119 411-8), con política NCP como mínimo (OVR-4.2.2-02) | **JWT o CWT** firmado, con `typ` `rc-wrp+jwt` o `rc-wrp+cwt` y firma AdES B-B (TS 119 475, cl. 4.4 y GEN-5.2.1-01). **No** es un certificado X.509. El ARF solo menciona el JWT (3.19) |
 | Quién lo expide | Una CA que el Estado autoriza: al menos una, obligatorio (2025/848 art. 7.1) | Un proveedor que el Estado autoriza. Era opcional y es obligatorio desde 2026/1730, que además exige emitirlo de forma automatizada y sin demora tras el registro |
 | A quién | Solo a partes usuarias registradas (art. 7.2). Un certificado por instancia técnica (ARF 3.18) | Solo a partes usuarias registradas (art. 8.2.a) |
 | Qué contiene | La identidad técnica | Cada uso previsto (art. 8.2.b), la política general de acceso (8.2.c) y la URL de la política de privacidad (8.2.g y 8.3) |
@@ -70,10 +70,14 @@ La base está en 2025/848:
 - **Hasta agosto de 2028 la comprobación de pedir de más no es exigible a la
   cartera**, porque depende de validar el certificado de registro. Una cartera
   puede hacerla antes, pero una parte usuaria no puede contar con ello.
-- **JWT o CWT.** El ARF v3.0.0 dice que el certificado de registro es un JWT.
-  Se suele citar que ETSI TS 119 475 admite también CWT
-  (`rc-wrp+jwt` / `rc-wrp+cwt`). No se ha podido comprobar en el texto de
-  ETSI; para pedir datos por OpenID4VP, el JWT es el caso que importa.
+- **JWT o CWT.** TS 119 475 admite los dos; el ARF solo habla del JWT. Para
+  pedir datos por OpenID4VP el caso que importa es el JWT; el CWT tiene
+  sentido en flujos CBOR (mdoc).
+- **TS 119 475 V1.2.1 va por detrás de 2026/1730.** Todavía dice que los
+  Estados «may mandate or allow» los certificados de registro y que, si no se
+  emite uno, la cartera consulta el registro nacional (cl. 4.4). Desde
+  2026/1730 los Estados **deben** autorizar al menos un proveedor; el acto
+  prevalece sobre la TS.
 - **El formato JWT tiene una consecuencia práctica**: no se valida con una
   biblioteca X.509, sino como un JWS cuya clave encadena hasta la LoTE de
   proveedores de certificados de registro.
