@@ -86,6 +86,7 @@ nav:
       - arf/especificaciones-tecnicas.md
   - Protocolos:
       - protocolos/README.md
+      - protocolos/haip.md
       - protocolos/perfiles-oid4vp-identificacion-del-verifier.md
   - Formatos: formatos/README.md
   - Confianza y PKI:

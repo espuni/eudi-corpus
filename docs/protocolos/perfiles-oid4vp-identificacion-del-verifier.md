@@ -3,12 +3,12 @@ id: PRO-010
 titulo: "Perfiles de OpenID4VP: identificación del verifier, cifrado de la respuesta y handover"
 procedencia: mixta          # norma (§1-§3) · observacion (§4)
 fuente: "OpenID4VP 1.0; HAIP 1.0; ISO/IEC TS 18013-7 anexo C; EU AV Blueprint, anexo A"
-version_fuente: "por fijar"
+version_fuente: "OpenID4VP 1.0 final (2025-07-09); HAIP 1.0 final (2025-12-24); AV anexo A commit 8b97287"
 url: ""
 requisitos: ["AV anexo A §A.6", "AV anexo A §A.8", "ISO/IEC TS 18013-7 anexo C"]
 estado: borrador
-verificado:
-revisar_antes:
+verificado: 2026-11-18
+revisar_antes: 2027-05-01
 tags: [oid4vp, haip, dc-api, mdoc, verificacion-de-edad, dcql]
 relacionadas: [PRO-002, PRO-003, PRO-004, FMT-002, AV-002, OBS-001, CRI-003]
 ---
@@ -23,8 +23,9 @@ EUDI conviven al menos tres, que no son intercambiables.
 
 ## 1. Los tres perfiles (procedencia: norma)
 
-La columna de AV está verificada contra el anexo A (commit `8b97287`, ver
-[AV-002](../edad/perfil-presentacion-av.md)); la de HAIP, pendiente.
+Verificado contra el anexo A de AV (commit `8b97287`, ver
+[AV-002](../edad/perfil-presentacion-av.md)), HAIP 1.0 final §5, 5.1 y 5.2 y
+OpenID4VP 1.0 final §5.9.3.
 
 | | Firmado (HAIP) | Fallback de AV | DC API con `org-iso-mdoc` |
 |---|---|---|---|
@@ -64,8 +65,10 @@ respuesta. Si se construye el transcript de un protocolo con la fórmula del
 otro, el fallo es opaco: error de etiqueta GCM al descifrar, o un error genérico
 de CBOR. Hay que probarlo contra vectores fijos antes de usar un wallet real.
 
-*Verificar ambas fórmulas contra el texto de OpenID4VP 1.0 y de la TS 18013-7
-antes de pasar la ficha a `revisado`.*
+La fórmula de OpenID4VP está verificada contra OpenID4VP 1.0 final, B.2.6
+(`OpenID4VPDCAPIHandoverInfo = [origin, nonce, jwkThumbprint]`). La del anexo
+C de ISO/IEC TS 18013-7 está tomada de una implementación y queda sin
+verificar contra la norma ISO, que es de pago.
 
 ## 3. DCQL para mdoc (procedencia: norma)
 

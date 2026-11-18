@@ -28,6 +28,9 @@ Solo entran preguntas cuya respuesta esté **verificada** contra la fuente.
 | EVA-018 | ¿Tiene que comprobar la parte usuaria la lista de revocación de un mdoc? | Es opcional; si la comprueba, admite los dos mecanismos (lista de estado y de identificadores) | 2026/1731 anexo IV, EAA-6.2.10.1-05 y -05.1 | Darlo por obligatorio |
 | EVA-019 | ¿Cómo recibe la cartera el certificado de registro en una petición mdoc? | En `requestInfo`, miembro `euWrprc`, codificado en CBOR | 2026/1731 anexo XII, ISO/IEC 18013-5-REQ-04 a -07 | Creer que solo existe en OpenID4VP |
 | EVA-020 | ¿Es obligatoria la Digital Credentials API para la parte usuaria? | Sí: 2026/1731 la hace obligatoria para cartera y parte usuaria (OIDFVP-HAIP-SUPPORT-05) | 2026/1731 anexo XII | Citar la TS, donde era opcional |
+| EVA-021 | ¿Puede una cartera EUDI aceptar una petición OpenID4VP sin firmar por la Digital Credentials API? | No: TS 119 472-2 API-03 lo prohíbe y prevalece sobre HAIP 5.2, que sí lo permite | TS 119 472-2 API-03 y GEN-03 | Aplicar HAIP sin el perfil EUDI |
+| EVA-022 | Si 2026/1731 anula el requisito de cifrar la respuesta en TS 119 472-2, ¿puede ir sin cifrar? | No: HAIP 5 sigue exigiendo el cifrado y el acto aplica HAIP | HAIP 1.0 §5; 2026/1731 anexo XII | Leer la anulación como una relajación |
+| EVA-023 | ¿Es obligatorio DPoP en la emisión EUDI? | Sí, por HAIP 4 (token de acceso atado al emisor) | HAIP 1.0 §4 | Buscarlo solo en TS 119 472-3, que no lo repite |
 | EVA-010 | ¿Qué plazo hay para retirar una solución suspendida cuya brecha no se ha remediado? | Tres meses desde la suspensión; la retirada, en 72 h tras ese plazo | 2025/847 art. 8.1 | Confundir las 72 h con las 24 h de aviso |
 
 ## Resultados

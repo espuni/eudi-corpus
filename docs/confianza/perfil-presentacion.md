@@ -30,12 +30,12 @@ TS 119 472-2 V1.2.1 (2026-03)**, con adaptaciones. Las que más cambian la TS:
 
 | Requisito de la TS | Qué decía | Tras 2026/1731 |
 |---|---|---|
-| OIDFVP-HAIP-COMMON-REQ-01 | Prefijo de cliente `x509_hash` obligatorio | **Sin efecto** como requisito propio (HAIP sigue aplicando) |
+| OIDFVP-HAIP-COMMON-REQ-01 | Prefijo de cliente `x509_hash` obligatorio | **Sin efecto** como requisito propio; HAIP 5 lo sigue exigiendo para peticiones firmadas |
 | RO-01 a RO-12 | `verifier_info` con `registrar_dataset` | **Sin efecto** |
 | RO-13 | El certificado de registro en `verifier_info` «si la parte usuaria lo tiene» | **Siempre**: un elemento de `verifier_info` incluye el certificado de registro |
 | RO-23 | La petición la firma la clave del certificado de acceso | Con `x509_hash`, el certificado hoja es el certificado de acceso |
-| COMMON-RESP-01 | La cartera cifra la respuesta | **Sin efecto** como requisito propio |
-| REDIRECTS-04 | Petición por referencia (`request_uri`) obligatoria | **Sin efecto** |
+| COMMON-RESP-01 | La cartera cifra la respuesta | **Sin efecto** como requisito propio; HAIP 5 sigue exigiendo el cifrado |
+| REDIRECTS-04 | Petición por referencia (`request_uri`) obligatoria | **Sin efecto**; HAIP 5.1 sigue exigiendo JAR con `request_uri` |
 | SUPPORT-02 y -05 | La API (DC API) era opcional | **Obligatoria** para la cartera y para la parte usuaria |
 | SUPPORT-03 | Cross-device solo por la API | La cartera **no debería** admitir el mecanismo por redirección en cross-device: es vulnerable a fijación de sesión |
 | ADD-API-05 | CTAP 2.2 *hybrid* para cross-device | Comprobar **proximidad física** por un canal local; se prefiere CTAP 2.3 sobre BLE frente al túnel *hybrid* |
@@ -98,12 +98,15 @@ Recordatorio de fechas: la obligación de validar el certificado de registro
 
 ## 6. Lo que conviene tener claro (procedencia: criterio)
 
-- **El acto ha quitado de la TS más de lo que añade.** Varios requisitos que
-  se citan a menudo como «de TS 119 472-2» (`x509_hash` como requisito propio,
-  cifrado obligatorio de la respuesta, petición por referencia,
-  `registrar_dataset`) **ya no obligan** por esa vía. Siguen obligando lo que
-  digan HAIP y OpenID4VP. Antes de citar un requisito de la TS, hay que mirar
-  si el anexo XII lo anula.
+- **Las anulaciones no relajan el perfil.** `x509_hash`, el cifrado de la
+  respuesta y la petición por referencia ya no obligan **por la TS**, pero
+  HAIP 5 y 5.1 los siguen exigiendo y el acto aplica HAIP (ver
+  [PRO-003](../protocolos/haip.md)). Lo único que desaparece de verdad es el
+  `registrar_dataset`. Antes de citar un requisito de la TS, hay que mirar si
+  el anexo XII lo anula y, si lo hace, citar HAIP en su lugar.
+- **Peticiones sin firmar por la DC API.** HAIP 5.2 obliga a la cartera a
+  admitirlas; TS 119 472-2 API-03 se lo prohíbe, y prevalece la TS
+  (OIDFVP-HAIP-GEN-03).
 - **Posible errata del acto.** El RO-23 adaptado dice que el certificado de
   acceso es el especificado «en ETSI TS 119 475». El perfil del certificado de
   acceso es TS 119 411-8; TS 119 475 trata del registro.

@@ -118,3 +118,7 @@ Lo que comprueba el emisor:
   cartera; el emisor actúa como verificador, no al revés.
 - **Cifrado.** Además de las suites de HAIP, cartera y emisor admiten
   A128GCM y A256GCM (CRYPTO-5-01).
+- **Lo que viene de HAIP y no repite la TS**: PKCE con S256, **DPoP**, `scope`
+  por configuración de credencial y *nonce endpoint* obligatorio si hay
+  credenciales ligadas a clave (HAIP 4 y 4.1). Ver
+  [PRO-003](../protocolos/haip.md).
