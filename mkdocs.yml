@@ -81,12 +81,17 @@ nav:
       - legal/actos.md
   - ARF:
       - arf/README.md
+      - arf/roles-y-habilitacion.md
+      - arf/ciclo-de-vida-cartera.md
       - arf/especificaciones-tecnicas.md
   - Protocolos:
       - protocolos/README.md
       - protocolos/perfiles-oid4vp-identificacion-del-verifier.md
   - Formatos: formatos/README.md
-  - Confianza y PKI: confianza/README.md
+  - Confianza y PKI:
+      - confianza/README.md
+      - confianza/certificados-parte-usuaria.md
+      - confianza/listas-y-anclas.md
   - Verificación de edad:
       - edad/README.md
       - edad/blueprint-av.md

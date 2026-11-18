@@ -20,9 +20,9 @@ afectadas y subir la versión fijada en una sola vez.
 
 | ID | Tema | Estado |
 |---|---|---|
-| ARF-001 | Roles del ecosistema y quién habilita cada uno | pendiente |
+| [ARF-001](roles-y-habilitacion.md) | Roles del ecosistema, quién habilita cada uno y cuáles son QTSP | borrador |
 | ARF-002 | Modelo de confianza: qué lista ancla a qué actor | pendiente |
-| ARF-003 | Ciclo de vida de la cartera: suspensión, retirada, revocación | pendiente |
+| [ARF-003](ciclo-de-vida-cartera.md) | Ciclo de vida: suspensión, retirada, revocación y pérdida de confianza | borrador |
 | ARF-004 | Anexo 2: requisitos de alto nivel (cómo se citan sus IDs) | pendiente |
 | ARF-005 | Anexo 3.01: PID Rulebook | pendiente |
 | [ARF-006](especificaciones-tecnicas.md) | Especificaciones técnicas de la Comisión TS01–TS14: versiones vigentes y enlaces fijados | borrador |
