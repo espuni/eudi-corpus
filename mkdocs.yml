@@ -87,6 +87,8 @@ nav:
   - Protocolos:
       - protocolos/README.md
       - protocolos/haip.md
+      - protocolos/openid4vp.md
+      - protocolos/dcql.md
       - protocolos/perfiles-oid4vp-identificacion-del-verifier.md
   - Formatos: formatos/README.md
   - Confianza y PKI:
@@ -101,6 +103,7 @@ nav:
       - edad/blueprint-av.md
       - edad/perfil-presentacion-av.md
       - edad/trusted-list-av.md
+      - edad/zk-longfellow.md
   - Observaciones:
       - observaciones/README.md
       - observaciones/zk-cross-device.md
