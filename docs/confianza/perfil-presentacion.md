@@ -65,7 +65,9 @@ Nueva cláusula 4.4, introducida por 2026/1731:
   continuar, si solo se revela lo cubierto o si se rechaza (-03).
 
 Recordatorio de fechas: la obligación de validar el certificado de registro
-(2024/2982 art. 3.4) aplica **desde el 11 de agosto de 2028**.
+(2024/2982 art. 3.4) aplica **desde el 11 de agosto de 2028**. Pero estos
+requisitos del anexo no llevan esa fecha de forma expresa: ver la ambigüedad
+anotada en [CNF-003](certificados-parte-usuaria.md).
 
 ## 3. Perfil mdoc
 

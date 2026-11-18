@@ -70,6 +70,14 @@ La base está en 2025/848:
 - **Hasta agosto de 2028 la comprobación de pedir de más no es exigible a la
   cartera**, porque depende de validar el certificado de registro. Una cartera
   puede hacerla antes, pero una parte usuaria no puede contar con ello.
+- **Ambigüedad de fechas.** El acto aplaza a 2028 solo el **art. 3.4** de
+  2024/2982 (validar el certificado de registro). Los requisitos
+  WRP-VALIDATION-01 y -02 y WRP-OVERASKING-01 a -03 están en el **anexo II** del
+  mismo reglamento, al que remite su art. 5, y el acto **no los aplaza
+  expresamente**. El considerando 6 de 2026/1731 dice que la intención es que
+  esa obligación se aplique desde el 11-8-2028. Criterio: tratarlo como
+  exigible en 2028, pero implementarlo antes, porque una lectura literal del
+  anexo podría exigirlo ya.
 - **JWT o CWT.** TS 119 475 admite los dos; el ARF solo habla del JWT. Para
   pedir datos por OpenID4VP el caso que importa es el JWT; el CWT tiene
   sentido en flujos CBOR (mdoc).
