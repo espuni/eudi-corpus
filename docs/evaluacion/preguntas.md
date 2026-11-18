@@ -20,6 +20,14 @@ Solo entran preguntas cuya respuesta esté **verificada** contra la fuente.
 | EVA-009 | ¿Recibe un proveedor de cartera certificado de acceso o de registro? | No: no se registra; se notifica y sus anclas van a la LoTE de proveedores de cartera | ARF 6.2.2 | Tratarlo como una parte usuaria más |
 | EVA-011 | ¿Qué política mínima aplica el proveedor de certificados de acceso? | La NCP de ETSI EN 319 411-1; las políticas cualificadas son opcionales | TS 119 411-8, OVR-4.2.2-02 | Suponer que tiene que ser QCP |
 | EVA-012 | Si un proveedor de PID deja de ser de confianza, ¿cómo se refleja en su LoTE? | Se quita de la lista: esa LoTE no tiene estado de servicio (el ARF dice que se marca Invalid; manda el formato de ETSI) | TS 119 602, tabla D.3 | Buscar un estado «Invalid» que no existe en ese perfil |
+| EVA-013 | ¿Tiene que admitir un proveedor de PID los dos flujos de OpenID4VCI? | No: al menos uno. La cartera, los dos | TS 119 472-3 GEN-REQ-4.1-03 y -04 | Exigir los dos al emisor |
+| EVA-014 | ¿Exige la norma presencia física para emitir PID con *pre-authorised code*? | No: 2026/1731 deja sin efecto GEN-REQ-4.1-05 | 2026/1731 anexo XI | Citar la TS sin sus adaptaciones |
+| EVA-015 | ¿En qué peticiones va la WIA y en cuál la KA? | WIA: PAR y token. KA: petición de credencial, en `proofs` | 2026/1731 anexo III, TR-WIA-3 y TR_KA-3 | Mandar la KA al token |
+| EVA-016 | ¿Qué tipos de prueba tiene que admitir un emisor de credenciales ligadas al dispositivo? | `jwt` y `attestation`, los dos | 2026/1731 anexo III, TR_KA-4 | Admitir solo `jwt` |
+| EVA-017 | ¿Cómo indica una SD-JWT VC que es una QEAA? | Con la claim `category` | TS 119 472-1 QEAA-5.2.2.2-01 | Buscarlo solo en el certificado |
+| EVA-018 | ¿Tiene que comprobar la parte usuaria la lista de revocación de un mdoc? | Es opcional; si la comprueba, admite los dos mecanismos (lista de estado y de identificadores) | 2026/1731 anexo IV, EAA-6.2.10.1-05 y -05.1 | Darlo por obligatorio |
+| EVA-019 | ¿Cómo recibe la cartera el certificado de registro en una petición mdoc? | En `requestInfo`, miembro `euWrprc`, codificado en CBOR | 2026/1731 anexo XII, ISO/IEC 18013-5-REQ-04 a -07 | Creer que solo existe en OpenID4VP |
+| EVA-020 | ¿Es obligatoria la Digital Credentials API para la parte usuaria? | Sí: 2026/1731 la hace obligatoria para cartera y parte usuaria (OIDFVP-HAIP-SUPPORT-05) | 2026/1731 anexo XII | Citar la TS, donde era opcional |
 | EVA-010 | ¿Qué plazo hay para retirar una solución suspendida cuya brecha no se ha remediado? | Tres meses desde la suspensión; la retirada, en 72 h tras ese plazo | 2025/847 art. 8.1 | Confundir las 72 h con las 24 h de aviso |
 
 ## Resultados

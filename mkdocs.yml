@@ -92,6 +92,9 @@ nav:
       - confianza/README.md
       - confianza/certificados-parte-usuaria.md
       - confianza/listas-y-anclas.md
+      - confianza/perfil-emision.md
+      - confianza/contenido-y-estado.md
+      - confianza/perfil-presentacion.md
   - Verificación de edad:
       - edad/README.md
       - edad/blueprint-av.md
