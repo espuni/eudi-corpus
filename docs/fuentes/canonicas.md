@@ -1,10 +1,12 @@
-# Fuentes
+# URL canónicas
 
-URL canónicas. Siempre la de la **versión** citada, no la de la última.
+Dónde está cada familia de documentos. Siempre se cita la URL de la **versión** citada, no la de la última.
+La versión exacta de cada fuente, cuándo se revisó y cuándo toca volver a mirarla están en el
+[seguimiento de fuentes](index.md).
 
 ## Legal
 
-- EUR-Lex: https://eur-lex.europa.eu/ (patrones ELI en [`legal/actos.md`](legal/actos.md))
+- EUR-Lex: https://eur-lex.europa.eu/ (patrones ELI en [`legal/actos.md`](../legal/actos.md))
 - Directrices art. 28 DSA: https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors
 
 ## Inventario de referencias (De Marco)
@@ -12,7 +14,7 @@ URL canónicas. Siempre la de la **versión** citada, no la de la última.
 - Repositorio: https://github.com/peppelinux/eidas-references-search-engine (Apache-2.0)
 - Informe: https://peppelinux.github.io/eidas-references-search-engine/report/index.html
 - Uso en este corpus: los actos y las citas acto → norma del
-  [catálogo de documentos referenciados](referencias/index.md), generados con
+  [catálogo de documentos referenciados](../referencias/index.md), generados con
   [`scripts/importar_inventario.py`](https://github.com/espuni/eudi-corpus/blob/main/scripts/importar_inventario.py)
   desde un commit fijado.
   Es una fuente secundaria: sirve para descubrir qué cita cada acto, no para citarlo.
@@ -20,7 +22,7 @@ URL canónicas. Siempre la de la **versión** citada, no la de la última.
 ## ARF y documentación de la Comisión
 
 - ARF, versión fijada v3.0.0: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/v3.0.0
-- Especificaciones técnicas TS01–TS14, sus OpenAPI y sus discusiones (fuente canónica; versiones y enlaces fijados en [`arf/especificaciones-tecnicas.md`](arf/especificaciones-tecnicas.md)): https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/tree/main/docs/technical-specifications
+- Especificaciones técnicas TS01–TS14, sus OpenAPI y sus discusiones (fuente canónica; versiones y enlaces fijados en [`arf/especificaciones-tecnicas.md`](../arf/especificaciones-tecnicas.md)): https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/tree/main/docs/technical-specifications
 - Implementación de la cartera EUDI: https://digital-strategy.ec.europa.eu/en/policies/eudi-wallet-implementation
 
 ## ETSI

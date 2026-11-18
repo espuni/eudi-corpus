@@ -40,8 +40,13 @@ apartado.
 
 `borrador` → `revisado` → (`obsoleto` cuando cambia la fuente).
 
-Cuando sale una versión nueva de una fuente: se actualiza `legal/actos.md` o
-`fuentes.md`, se buscan las fichas con la versión antigua y se revisan.
+Las fuentes primarias se siguen en `data/fuentes.yml`: versión citada, fecha de
+la última revisión, periodicidad y cómo se detecta un cambio. De ahí salen el
+[seguimiento](fuentes/index.md) y el [grafo](fuentes/grafo.md), y cada mes el
+flujo `vigilar-fuentes` abre un issue con lo que ha cambiado y lo que toca revisar.
+Cuando sale una versión nueva de una fuente: se actualiza su entrada (y
+`legal/actos.md` si es un acto), se revisan las fichas que la citan y las fuentes
+que dependen de ella, que el seguimiento lista en «si cambia, revisar también».
 Lo perecedero (estado de borradores, fechas de aplicación aún no cumplidas)
 lleva `revisar_antes`.
 

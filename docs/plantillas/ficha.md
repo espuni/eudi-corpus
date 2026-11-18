@@ -4,7 +4,7 @@ titulo: ""
 procedencia: norma     # norma | observacion | criterio (o mixta, marcando cada apartado)
 fuente: ""             # documento y versión exacta, p. ej. "ETSI TS 119 602 V1.1.1"
 version_fuente: ""
-url: ""                # URL canónica de esa versión (ver fuentes.md)
+url: ""                # URL canónica de esa versión (ver fuentes/canonicas.md)
 requisitos: []         # IDs o artículos citados, p. ej. ["GEN-5.2.4-04", "art. 5 bis.9"]
 estado: borrador       # borrador | revisado | obsoleto
 verificado: AAAA-MM-DD # última comprobación contra la fuente

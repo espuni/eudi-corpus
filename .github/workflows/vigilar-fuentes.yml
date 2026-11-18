@@ -1,0 +1,46 @@
+name: Vigilar fuentes
+
+# Revisión periódica de data/fuentes.yml: comprueba en GitHub las fuentes que
+# viven allí y lista las revisiones manuales que tocan. Abre un issue
+# «revision-fuentes», o comenta en el que siga abierto. No cambia el repositorio.
+
+on:
+  schedule:
+    - cron: "17 6 1 * *"   # el día 1 de cada mes
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install PyYAML==6.0.2
+      - name: Revisar las fuentes
+        run: python3 -I scripts/vigilar_fuentes.py --salida informe.md --resumen resumen.txt
+      - name: Abrir o actualizar el issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat informe.md >> "$GITHUB_STEP_SUMMARY"
+          . ./resumen.txt
+          if [ "$pendientes" -eq 0 ]; then
+            echo "Nada que revisar."
+            exit 0
+          fi
+          gh label create revision-fuentes --color 1F5FBF \
+            --description "Revisión periódica de las fuentes del corpus" --force
+          abierto=$(gh issue list --label revision-fuentes --state open \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$abierto" ]; then
+            gh issue comment "$abierto" --body-file informe.md
+          else
+            gh issue create --title "Revisión de fuentes $(date -u +%Y-%m)" \
+              --label revision-fuentes --body-file informe.md
+          fi

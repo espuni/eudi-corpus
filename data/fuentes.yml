@@ -1,0 +1,659 @@
+# Registro de fuentes primarias del corpus, para su seguimiento.
+#
+# Cada fuente dice qué versión cita el corpus, cuándo se revisó por última vez,
+# cada cuánto hay que volver a mirarla y cómo se detecta que ha cambiado. Con
+# esto, hooks/fuentes.py genera las páginas «Fuentes» (seguimiento, grafo e
+# impacto) y scripts/vigilar_fuentes.py hace la revisión periódica.
+#
+# Campos:
+#   id            identificador estable (no se reutiliza)
+#   nombre        cómo se cita
+#   corto         nombre para el grafo (si falta, el de `nombre` hasta « · »)
+#   tipo          acto | arf | etsi | openid | ietf | w3c | iso | av | herramienta
+#   citada        versión exacta que cita el corpus (null si está por fijar)
+#   url           URL de la versión citada (si falta, la de `ref`)
+#   ref           id en el catálogo de documentos referenciados (enlaza fichas)
+#   periodicidad  días entre revisiones
+#   revisado      fecha de la última revisión contra la fuente (null: nunca)
+#   vigilar       cómo se detecta un cambio:
+#                   metodo: git     → repo, y opcionalmente base (commit o etiqueta
+#                                     desde la que contar commits), rutas,
+#                                     etiquetas (patrón de las etiquetas de versión)
+#                                     y vista (última etiqueta ya revisada, si se
+#                                     sigue citando otra anterior)
+#                   metodo: eurlex  → celex; revisión manual de las relaciones
+#                                     del acto en EUR-Lex
+#                   metodo: manual  → donde (URL) y que (qué mirar)
+#   relaciones    lista de {tipo, a}: modifica | desarrolla | cita | perfila | usa
+#                 Las citas acto → norma del inventario se añaden solas.
+#   nota          lo que conviene saber al revisarla
+#
+# Tras revisar una fuente: actualizar `revisado` (y `citada`, `url` y `base` si
+# cambió de versión), y revisar las fichas que muestra la página de impacto.
+
+fuentes:
+
+# ── Legislación UE ────────────────────────────────────────────────────────────
+
+- id: eidas
+  nombre: Reglamento (UE) 910/2014 (eIDAS), consolidado
+  corto: eIDAS 910/2014
+  tipo: acto
+  citada: texto consolidado de 18-10-2024
+  ref: acto:eidas
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32014R0910}
+  nota: Una consolidación nueva se publica como otro CELEX (02014R0910-AAAAMMDD).
+
+- id: reg-2024-1183
+  nombre: Reglamento (UE) 2024/1183 (eIDAS 2)
+  corto: eIDAS 2 (2024/1183)
+  tipo: acto
+  citada: texto oficial
+  ref: UE 2024/1183
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32024R1183}
+  relaciones:
+    - {tipo: modifica, a: eidas}
+
+- id: cir-2024-2977
+  nombre: CIR 2024/2977 · PID y atestaciones
+  tipo: acto
+  citada: texto oficial, modificado por 2026/1731
+  ref: acto:2024-2977
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32024R2977, conocidos: [32026R1731]}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2024-2979
+  nombre: CIR 2024/2979 · Integridad y funcionalidades de la cartera
+  tipo: acto
+  citada: texto oficial, modificado por 2026/1731
+  ref: acto:2024-2979
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32024R2979, conocidos: [32026R1731]}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2024-2980
+  nombre: CIR 2024/2980 · Notificaciones y listas de confianza
+  tipo: acto
+  citada: texto oficial, modificado por 2026/1731
+  ref: acto:2024-2980
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32024R2980, conocidos: [32026R1731]}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2024-2981
+  nombre: CIR 2024/2981 · Certificación de las carteras
+  tipo: acto
+  citada: texto oficial
+  ref: acto:2024-2981
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32024R2981}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2024-2982
+  nombre: CIR 2024/2982 · Protocolos e interfaces
+  tipo: acto
+  citada: texto oficial, modificado por 2026/1731
+  ref: acto:2024-2982
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32024R2982, conocidos: [32026R1731]}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+  nota: Su art. 3.4 (validar el certificado de registro) aplica desde el 11-8-2028.
+
+- id: cir-2025-846
+  nombre: CIR 2025/846 · Correspondencia transfronteriza de identidad
+  tipo: acto
+  citada: texto oficial
+  ref: acto:2025-846
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32025R0846}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2025-847
+  nombre: CIR 2025/847 · Violaciones de seguridad de la cartera
+  tipo: acto
+  citada: texto oficial
+  ref: acto:2025-847
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32025R0847}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2025-848
+  nombre: CIR 2025/848 · Registro de partes usuarias
+  tipo: acto
+  citada: texto oficial, modificado por 2026/1730
+  ref: acto:2025-848
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32025R0848, conocidos: [32026R1730]}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+  nota: Aplica desde el 24-12-2026.
+
+- id: cir-2025-849
+  nombre: CIR 2025/849 · Lista de carteras certificadas
+  tipo: acto
+  citada: texto oficial
+  ref: acto:2025-849
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32025R0849}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2025-1569
+  nombre: CIR 2025/1569 · Verificación de atributos (QEAA)
+  tipo: acto
+  citada: texto oficial, modificado por 2026/1735
+  ref: acto:2025-1569
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32025R1569, conocidos: [32026R1735]}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cid-2025-2164
+  nombre: CID 2025/2164 · Listas de confianza de prestadores
+  tipo: acto
+  citada: texto oficial
+  ref: acto:2025-2164
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32025D2164}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2026-798
+  nombre: CIR 2026/798 · Incorporación remota a la cartera
+  tipo: acto
+  citada: texto oficial
+  ref: acto:2026-798
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32026R0798}
+  relaciones:
+    - {tipo: desarrolla, a: eidas}
+
+- id: cir-2026-1730
+  nombre: CIR 2026/1730 · Modifica el registro de partes usuarias
+  tipo: acto
+  citada: texto oficial (adoptado el 15-7-2026)
+  ref: acto:2026-1730
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32026R1730}
+  relaciones:
+    - {tipo: modifica, a: cir-2025-848}
+  nota: Fecha de publicación en el DO sin comprobar; entra en vigor a los 20 días.
+
+- id: cir-2026-1731
+  nombre: CIR 2026/1731 · Normas y especificaciones de referencia
+  tipo: acto
+  citada: texto oficial (adoptado el 15-7-2026)
+  ref: acto:2026-1731
+  periodicidad: 90
+  revisado: 2026-11-18
+  vigilar: {metodo: eurlex, celex: 32026R1731}
+  relaciones:
+    - {tipo: modifica, a: cir-2024-2977}
+    - {tipo: modifica, a: cir-2024-2979}
+    - {tipo: modifica, a: cir-2024-2980}
+    - {tipo: modifica, a: cir-2024-2982}
+    - {tipo: cita, a: ietf-status-list}
+  nota: >-
+    Fija las versiones de TS 119 472-1/-2/-3, OpenID4VCI, OpenID4VP, HAIP e ISO.
+    Si sale un acto que la modifique, es la revisión más importante del corpus.
+    Fecha de publicación en el DO sin comprobar.
+
+- id: cir-2026-1735
+  nombre: CIR 2026/1735 · Modifica la verificación de atributos
+  tipo: acto
+  citada: texto oficial
+  ref: acto:2026-1735
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32026R1735}
+  relaciones:
+    - {tipo: modifica, a: cir-2025-1569}
+
+- id: dsa
+  nombre: Reglamento (UE) 2022/2065 (DSA), art. 28
+  corto: DSA 2022/2065
+  tipo: acto
+  citada: texto oficial
+  ref: UE 2022/2065
+  periodicidad: 365
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32022R2065}
+
+- id: dsa-28-directrices
+  nombre: Directrices de la Comisión sobre el art. 28.1 del DSA
+  corto: Directrices art. 28 DSA
+  tipo: acto
+  citada: publicación de la Comisión
+  ref: UE DSA 28 directrices
+  periodicidad: 180
+  revisado: null
+  vigilar:
+    metodo: manual
+    donde: https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors
+    que: Nueva versión de las directrices o revisión anunciada
+  relaciones:
+    - {tipo: desarrolla, a: dsa}
+    - {tipo: usa, a: av-spec}
+
+- id: rgpd
+  nombre: Reglamento (UE) 2016/679 (RGPD)
+  corto: RGPD 2016/679
+  tipo: acto
+  citada: texto oficial
+  ref: UE 2016/679
+  periodicidad: 365
+  revisado: null
+  vigilar: {metodo: eurlex, celex: 32016R0679}
+
+# ── ARF y especificaciones de la Comisión ────────────────────────────────────
+
+- id: arf
+  nombre: Architecture and Reference Framework (ARF)
+  corto: ARF
+  tipo: arf
+  citada: v3.0.0
+  ref: ARF
+  periodicidad: 30
+  revisado: 2026-11-18
+  vigilar:
+    metodo: git
+    repo: eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework
+    base: v3.0.0
+    etiquetas: v*
+  relaciones:
+    - {tipo: usa, a: etsi-119-602}
+    - {tipo: desarrolla, a: eidas}
+
+- id: ts-comision
+  nombre: Especificaciones técnicas de la Comisión TS01–TS14
+  corto: TS01–TS14 de la Comisión
+  tipo: arf
+  citada: commit cfc383e (2026-11-11)
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/tree/cfc383e44294d65cfa6cccbbff6c927f0df91f9a/docs/technical-specifications
+  periodicidad: 30
+  revisado: 2026-11-17
+  vigilar:
+    metodo: git
+    repo: eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
+    base: cfc383e44294d65cfa6cccbbff6c927f0df91f9a
+    rutas: [docs/technical-specifications]
+  relaciones:
+    - {tipo: desarrolla, a: arf}
+  nota: Cada TS lleva su versión en la cabecera; la ficha ARF-006 las fija una a una.
+
+# ── ETSI ─────────────────────────────────────────────────────────────────────
+
+- id: etsi-119-411-8
+  nombre: ETSI TS 119 411-8 · Certificados de acceso (WRPAC)
+  tipo: etsi
+  citada: V1.1.1
+  ref: ETSI TS 119 411-8 V1.1.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: &etsi_manual
+    metodo: manual
+    donde: https://www.etsi.org/standards-search
+    que: Versión publicada más alta en etsi.org/deliver (la carpeta 01.0x.01_60)
+
+- id: etsi-119-475
+  nombre: ETSI TS 119 475 · Certificados de registro (WRPRC)
+  tipo: etsi
+  citada: V1.2.1
+  ref: ETSI TS 119 475 V1.2.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: *etsi_manual
+  nota: Va por detrás de 2026/1730 (aún dice «may mandate or allow»).
+
+- id: etsi-119-412-6
+  nombre: ETSI TS 119 412-6 · Perfiles de certificado para PID y QEAA
+  tipo: etsi
+  citada: V1.2.1
+  ref: ETSI TS 119 412-6 V1.2.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: *etsi_manual
+  nota: Ningún acto del inventario la cita.
+
+- id: etsi-119-602
+  nombre: ETSI TS 119 602 · Listas de entidades de confianza (LoTE)
+  tipo: etsi
+  citada: V1.1.1
+  ref: ETSI TS 119 602 V1.1.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: *etsi_manual
+  nota: Discrepancia con el ARF sobre quitar o marcar como Invalid (CNF-009).
+
+- id: etsi-119-612
+  nombre: ETSI TS 119 612 · Trusted Lists
+  tipo: etsi
+  citada: V2.4.1
+  ref: ETSI TS 119 612 V2.4.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: *etsi_manual
+
+- id: etsi-119-615
+  nombre: ETSI TS 119 615 · Uso de las Trusted Lists
+  tipo: etsi
+  citada: V1.3.1
+  ref: ETSI TS 119 615 V1.3.1
+  periodicidad: 180
+  revisado: null
+  vigilar: *etsi_manual
+  relaciones:
+    - {tipo: perfila, a: etsi-119-612}
+
+- id: etsi-119-472-1
+  nombre: ETSI TS 119 472-1 · Perfiles de atestaciones (SD-JWT VC y mdoc)
+  tipo: etsi
+  citada: V1.2.1 (2026-02)
+  ref: ETSI TS 119 472-1 V1.2.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: *etsi_manual
+  relaciones:
+    - {tipo: perfila, a: ietf-sd-jwt-vc}
+    - {tipo: perfila, a: iso-18013-5}
+  nota: La versión obligatoria es la que fija 2026/1731, aunque ETSI publique otra.
+
+- id: etsi-119-472-2
+  nombre: ETSI TS 119 472-2 · Perfil de presentación
+  tipo: etsi
+  citada: V1.2.1 (2026-03)
+  ref: ETSI TS 119 472-2 V1.2.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: *etsi_manual
+  relaciones:
+    - {tipo: perfila, a: openid4vp}
+    - {tipo: perfila, a: haip}
+    - {tipo: perfila, a: iso-18013-7}
+  nota: La versión obligatoria es la que fija 2026/1731, aunque ETSI publique otra.
+
+- id: etsi-119-472-3
+  nombre: ETSI TS 119 472-3 · Perfil de emisión
+  tipo: etsi
+  citada: V1.1.1 (2026-03)
+  ref: ETSI TS 119 472-3 V1.1.1
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: *etsi_manual
+  relaciones:
+    - {tipo: perfila, a: openid4vci}
+    - {tipo: perfila, a: haip}
+  nota: La versión obligatoria es la que fija 2026/1731, aunque ETSI publique otra.
+
+# ── OpenID Foundation ────────────────────────────────────────────────────────
+
+- id: openid4vci
+  nombre: OpenID for Verifiable Credential Issuance 1.0
+  corto: OpenID4VCI 1.0
+  tipo: openid
+  citada: 1.0 final
+  ref: OpenID OpenID4VCI V1.0
+  periodicidad: 180
+  revisado: null
+  vigilar: {metodo: git, repo: openid/OpenID4VCI}
+  nota: Los commits posteriores a la versión final suelen ser erratas o la siguiente versión.
+
+- id: openid4vp
+  nombre: OpenID for Verifiable Presentations 1.0
+  corto: OpenID4VP 1.0
+  tipo: openid
+  citada: 1.0 final (2025-07-09)
+  ref: OpenID OpenID4VP V1.0
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: {metodo: git, repo: openid/OpenID4VP}
+  relaciones:
+    - {tipo: usa, a: w3c-dc-api}
+
+- id: haip
+  nombre: OpenID4VC High Assurance Interoperability Profile 1.0
+  corto: HAIP 1.0
+  tipo: openid
+  citada: 1.0 final (2025-12-24)
+  ref: OpenID OpenID4VC-HAIP V1.0
+  periodicidad: 180
+  revisado: 2026-11-18
+  vigilar: {metodo: git, repo: openid/oid4vc-haip}
+  relaciones:
+    - {tipo: perfila, a: openid4vci}
+    - {tipo: perfila, a: openid4vp}
+    - {tipo: usa, a: ietf-attestation-client-auth}
+    - {tipo: usa, a: w3c-dc-api}
+    - {tipo: usa, a: ietf-sd-jwt-vc}
+
+# ── IETF ─────────────────────────────────────────────────────────────────────
+
+- id: ietf-sd-jwt
+  nombre: SD-JWT (RFC 9901)
+  corto: SD-JWT (RFC 9901)
+  tipo: ietf
+  citada: RFC 9901
+  ref: IETF SD-JWT
+  periodicidad: 365
+  revisado: null
+  vigilar:
+    metodo: manual
+    donde: https://www.rfc-editor.org/errata_search.php?rfc=9901
+    que: Erratas verificadas o un RFC que lo actualice
+
+- id: ietf-sd-jwt-vc
+  nombre: SD-JWT-based Verifiable Credentials (borrador)
+  corto: SD-JWT VC
+  tipo: ietf
+  citada: draft-ietf-oauth-sd-jwt-vc-17
+  ref: IETF SD-JWT VC
+  periodicidad: 30
+  revisado: null
+  vigilar:
+    metodo: git
+    repo: oauth-wg/oauth-sd-jwt-vc
+    etiquetas: draft-ietf-oauth-sd-jwt-vc-*
+  relaciones:
+    - {tipo: usa, a: ietf-sd-jwt}
+  nota: La revisión -17 es la que cita el inventario para 2026/1731; comprobar en el acto.
+
+- id: ietf-status-list
+  nombre: Token Status List (borrador)
+  corto: Token Status List
+  tipo: ietf
+  citada: draft-ietf-oauth-status-list-20
+  ref: IETF status list
+  periodicidad: 30
+  revisado: 2026-11-18
+  vigilar:
+    metodo: git
+    repo: oauth-wg/draft-ietf-oauth-status-list
+    etiquetas: draft-ietf-oauth-status-list-*
+    vista: draft-ietf-oauth-status-list-21
+  nota: >-
+    La -20 es la que cita la adaptación de 2026/1731 (EAA-6.2.10.1), y es la
+    que obliga aunque salga otra o pase a RFC. La -21 existe desde antes del
+    18-11-2026; no se ha comparado con la -20.
+
+- id: ietf-attestation-client-auth
+  nombre: OAuth 2.0 Attestation-Based Client Authentication (borrador)
+  corto: Attestation-Based Client Auth
+  tipo: ietf
+  citada: null
+  ref: IETF attestation client auth
+  periodicidad: 30
+  revisado: null
+  vigilar:
+    metodo: git
+    repo: oauth-wg/draft-ietf-oauth-attestation-based-client-auth
+    etiquetas: draft-ietf-oauth-attestation-based-client-auth-*
+  nota: Revisión por fijar (ficha PRO-007 pendiente). Es lo que transporta la WIA.
+
+- id: ietf-libzk
+  nombre: libzk, borrador CFRG de longfellow
+  corto: libzk (CFRG)
+  tipo: ietf
+  citada: null
+  ref: IETF libzk
+  periodicidad: 90
+  revisado: null
+  vigilar:
+    metodo: manual
+    donde: https://datatracker.ietf.org/doc/draft-google-cfrg-libzk/
+    que: Revisión nueva o adopción por el grupo CFRG
+  relaciones:
+    - {tipo: usa, a: ietf-rfc-9180}
+
+- id: ietf-rfc-9180
+  nombre: HPKE (RFC 9180)
+  corto: HPKE (RFC 9180)
+  tipo: ietf
+  citada: RFC 9180
+  ref: IETF RFC 9180
+  periodicidad: 365
+  revisado: null
+  vigilar:
+    metodo: manual
+    donde: https://www.rfc-editor.org/errata_search.php?rfc=9180
+    que: Erratas verificadas
+
+# ── W3C ──────────────────────────────────────────────────────────────────────
+
+- id: w3c-dc-api
+  nombre: Digital Credentials API (borrador W3C)
+  corto: Digital Credentials API
+  tipo: w3c
+  citada: borrador del editor
+  ref: W3C DC API
+  periodicidad: 30
+  revisado: null
+  vigilar: {metodo: git, repo: w3c-fedid/digital-credentials}
+
+# ── ISO ──────────────────────────────────────────────────────────────────────
+
+- id: iso-18013-5
+  nombre: ISO/IEC 18013-5 · mDL
+  tipo: iso
+  citada: '2021'
+  ref: ISO-IEC ISO/IEC 18013-5 V2021
+  periodicidad: 365
+  revisado: null
+  vigilar:
+    metodo: manual
+    donde: https://www.iso.org/search.html?q=ISO%2FIEC+18013-5
+    que: Edición nueva o enmienda. De pago; no se ha contrastado su texto
+  nota: El corpus no reproduce su contenido.
+
+- id: iso-18013-7
+  nombre: ISO/IEC TS 18013-7 · mDL en línea (anexo C, DC API)
+  tipo: iso
+  citada: '2025'
+  ref: ISO-IEC ISO/IEC 18013-7 V2025
+  periodicidad: 365
+  revisado: null
+  vigilar:
+    metodo: manual
+    donde: https://www.iso.org/search.html?q=ISO%2FIEC+18013-7
+    que: Edición nueva o enmienda. De pago; no se ha contrastado su texto
+  relaciones:
+    - {tipo: perfila, a: iso-18013-5}
+    - {tipo: usa, a: ietf-rfc-9180}
+    - {tipo: usa, a: w3c-dc-api}
+
+# ── Verificación de edad ─────────────────────────────────────────────────────
+
+- id: av-spec
+  nombre: Especificación técnica de verificación de edad (anexos A y B)
+  corto: Especificación AV
+  tipo: av
+  citada: commit 8b97287 (2026-09-02)
+  ref: AV spec
+  periodicidad: 30
+  revisado: 2026-11-18
+  vigilar:
+    metodo: git
+    repo: eu-digital-identity-wallet/av-doc-technical-specification
+    base: 8b9728752bd8d8eede6077ade4be8900949de2d9
+    etiquetas: v*
+  relaciones:
+    - {tipo: perfila, a: iso-18013-7}
+    - {tipo: perfila, a: openid4vp}
+    - {tipo: usa, a: av-tl}
+    - {tipo: usa, a: longfellow}
+    - {tipo: usa, a: etsi-119-612}
+  nota: Sin etiquetas desde la v1.0.6 (julio de 2025); se sigue por commits.
+
+- id: av-tl
+  nombre: Trusted List de verificación de edad
+  corto: Trusted List AV
+  tipo: av
+  citada: lista publicada (se consulta en vivo)
+  ref: AV TL
+  periodicidad: 90
+  revisado: 2026-11-17
+  vigilar:
+    metodo: manual
+    donde: https://eidas.ec.europa.eu/efda/trust-services/browse/av-tl
+    que: Cambio de firmante, de URL o de NextUpdate; emisores nuevos
+  relaciones:
+    - {tipo: usa, a: etsi-119-612}
+
+- id: longfellow
+  nombre: longfellow-zk (implementación de referencia)
+  corto: longfellow-zk
+  tipo: av
+  citada: v0.9
+  periodicidad: 90
+  revisado: 2026-11-18
+  url: https://github.com/google/longfellow-zk
+  vigilar:
+    metodo: git
+    repo: google/longfellow-zk
+    base: v0.9
+    etiquetas: v*
+  relaciones:
+    - {tipo: usa, a: ietf-libzk}
+
+# ── Herramientas ─────────────────────────────────────────────────────────────
+
+- id: inventario-demarco
+  nombre: Inventario de referencias de De Marco
+  corto: Inventario De Marco
+  tipo: herramienta
+  citada: commit 300f644 (grafo del 2026-07-29)
+  url: https://github.com/peppelinux/eidas-references-search-engine
+  periodicidad: 30
+  revisado: 2026-11-18
+  vigilar:
+    metodo: git
+    repo: peppelinux/eidas-references-search-engine
+    base: 300f644b2700439c52aad03e37611932fdb1404b
+  nota: >-
+    Fuente secundaria que alimenta el catálogo y las citas acto → norma. Si
+    avanza, reimportar con scripts/importar_inventario.py: es como aparecen
+    actos nuevos.

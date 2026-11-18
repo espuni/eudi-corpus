@@ -13,8 +13,11 @@ Hace tres cosas en cada build:
 3. Añade a cada ficha un recuadro con sus metadatos y, al final, las
    referencias que cita y las fichas que la citan.
 
-Datos: `data/inventario.json` (generado por `scripts/importar_inventario.py`)
-y `data/referencias.yml` (mantenido a mano).
+Además genera `fuentes/index.md` y `fuentes/grafo.md` (seguimiento y grafo de
+las fuentes primarias) con `hooks/fuentes.py`.
+
+Datos: `data/inventario.json` (generado por `scripts/importar_inventario.py`),
+`data/referencias.yml` y `data/fuentes.yml` (mantenidos a mano).
 """
 
 from __future__ import annotations
@@ -26,8 +29,13 @@ import posixpath
 import re
 from collections import defaultdict
 
+import sys
+
 import yaml
 from mkdocs.structure.files import File
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import fuentes as _fuentes  # noqa: E402
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 HOY = _dt.date.today()
@@ -206,6 +214,11 @@ def on_files(files, config):
     for uri, contenido in generar_catalogo().items():
         files.append(File.generated(config, uri, content=contenido))
     files.append(File.generated(config, "index.md", content=generar_panel()))
+    paginas_fuentes = _fuentes.generar_paginas(
+        _fuentes.cargar(RAIZ), refs, ref_en, _estado["por_uri"], HOY,
+        config["site_url"] or "/", pill, aviso_generado())
+    for uri, contenido in paginas_fuentes.items():
+        files.append(File.generated(config, uri, content=contenido))
     return files
 
 
@@ -517,6 +530,9 @@ def generar_panel() -> str:
     en_corpus = sum(1 for r in refs if _estado["ref_en"].get(r))
     con_enlace = sum(1 for r in refs.values() if r.get("url") and "iso.org/search" not in r["url"])
 
+    fuentes_ = _fuentes.cargar(RAIZ)
+    fuentes_pend = sum(1 for f in fuentes_ if _fuentes.estado(f, HOY)[0] != "al-dia")
+
     def tarjeta(icono, titulo, cifra, texto, enlace):
         return (f"-   :{icono}:{{ .lg .middle }} __{titulo}__\n\n    ---\n\n"
                 f"    <span class=\"cifra\">{cifra}</span>\n\n    {texto}\n\n"
@@ -533,6 +549,9 @@ def generar_panel() -> str:
                 ("Ir al catálogo", "referencias/index.md")),
         tarjeta("material-gavel", "Tracker legal", len(filas_actos),
                 f"filas, {verificados} verificadas en EUR-Lex", ("Ver el tracker", "legal/actos.md")),
+        tarjeta("material-radar", "Fuentes en seguimiento", len(fuentes_),
+                f"{fuentes_pend} por revisar (vencidas, a punto de vencer o nunca revisadas)",
+                ("Ver el seguimiento", "fuentes/index.md")),
     ])
 
     proc = " · ".join(f"{k}: {v}" for k, v in sorted(por_proc.items()))

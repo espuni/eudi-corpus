@@ -59,7 +59,7 @@ mkdocs serve
 | [`scripts/`](scripts/) | Importación del inventario de referencias |
 
 Además: [`docs/metodo.md`](docs/metodo.md) (reglas del corpus),
-[`docs/fuentes.md`](docs/fuentes.md) y [`docs/glosario.md`](docs/glosario.md).
+[`docs/fuentes/canonicas.md`](docs/fuentes/canonicas.md) y [`docs/glosario.md`](docs/glosario.md).
 
 ## Cómo leer una ficha
 
